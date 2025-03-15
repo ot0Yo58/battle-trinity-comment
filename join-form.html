@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>バトルトリニティ大会 - 参加フォーム</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -21,38 +21,50 @@
     </header>
 
     <div class="container">
-        <section>
-            <h2>参加フォーム</h2>
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLScnHsdEq1jJq7nE5zRDwoRUT0mx6Rv0YkhqXY_a-ZGvQMssKA/viewform?usp=dialog" method="post" class="join-form">
-              <label for="team-name">チーム名:</label>
-              <input type="text" id="team-name" name="entry.1883610510" required>
+        <section class="form-section">
+            <h2 class="form-title">参加フォーム</h2>
+            <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="post" class="join-form">
+                <div class="form-group">
+                    <label for="team-name">チーム名:</label>
+                    <input type="text" id="team-name" name="entry.123456789" required class="form-input">
+                </div>
 
-              <label for="leader-name">リーダー名:</label>
-              <input type="text" id="leader-name" name="entry.110316538" required>
+                <div class="form-group">
+                    <label for="leader-name">リーダー名:</label>
+                    <input type="text" id="leader-name" name="entry.987654321" required class="form-input">
+                </div>
 
-              <label>ライブ配信可否:</label>
-              <div class="radio-group">
-                  <input type="radio" id="live-yes" name="entry.618461255" value="yes" required>
-                  <label for="live-yes">可</label>
-                  <input type="radio" id="live-no" name="entry.618461255" value="no">
-                  <label for="live-no">不可</label>
-              </div>
+                <div class="form-group">
+                    <label>ライブ配信可否:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="live-yes" name="entry.111222333" value="yes" checked required class="radio-input">
+                        <label for="live-yes" class="radio-label">可</label>
+                        <input type="radio" id="live-no" name="entry.111222333" value="no" class="radio-input">
+                        <label for="live-no" class="radio-label">不可</label>
+                    </div>
+                </div>
 
-              <label for="members">メンバー (4人分の名前):</label>
-              <textarea id="members" name="entry.1621203308" rows="4" required></textarea>
+                <div class="form-group">
+                    <label>Discord参加可否:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="discord-yes" name="entry.777888999" value="yes" checked required class="radio-input">
+                        <label for="discord-yes" class="radio-label">可</label>
+                        <input type="radio" id="discord-no" name="entry.777888999" value="no" class="radio-input">
+                        <label for="discord-no" class="radio-label">不可</label>
+                    </div>
+                </div>
 
-              <label>Discord参加可否:</label>
-              <div class="radio-group">
-                  <input type="radio" id="discord-yes" name="entry.326826678" value="yes" required>
-                  <label for="discord-yes">可</label>
-                  <input type="radio" id="discord-no" name="entry.326826678" value="no">
-                  <label for="discord-no">不可</label>
-              </div>
+                <div class="form-group">
+                    <label for="members">メンバー (4人分の名前):</label>
+                    <textarea id="members" name="entry.444555666" rows="4" required class="form-textarea"></textarea>
+                </div>
 
-              <label for="remarks">備考:</label>
-              <textarea id="remarks" name="entry.475093637" rows="3"></textarea>
+                <div class="form-group">
+                    <label for="remarks">備考:</label>
+                    <textarea id="remarks" name="entry.000111222" rows="3" class="form-textarea"></textarea>
+                </div>
 
-              <button type="submit" class="btn">送信</button>
+                <button type="submit" class="btn form-submit">送信</button>
             </form>
         </section>
     </div>
@@ -60,5 +72,7 @@
     <footer>
         <p>© 2025 バトルトリニティ大会</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,377 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff4444;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #ff4444;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff4444;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 黒背景を固定 */
+  z-index: 1; /* スライドショーより手前 */
+  opacity: 1; /* 固定 */
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: 0;
+  opacity: 1;
+  /*transition: opacity 2s ease;*/
+}
+
+.slideshow::after {
+  display: none; /* 不要なオーバーレイを削除 */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ff4444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background: #cc3333;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ff4444;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.winners-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.winner {
+  text-align: center;
+}
+
+.winner-name {
+  color: #ff4444;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.winner-menber {
+  color: #fff;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.overview-content {
+  padding: 20px;
+}
+
+.overview-content h3 {
+  color: #ff4444;
+  margin-top: 20px;
+}
+
+.overview-content p, .overview-content ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.overview-content ul {
+  padding-left: 20px;
+}
+
+.join-content {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.join-content p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.join-content ul {
+  padding-left: 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.join-content .btn {
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  border-top: 2px solid #ff4444;
+}
+
+.form-section {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+}
+
+.form-title {
+  color: #ff4444;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ff9999;
+  font-weight: bold;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  border: 2px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #ff4444;
+  box-shadow: 0 0 10px #ff6666;
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #444;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.radio-input:checked + .radio-label {
+  background: #ff4444;
+  color: #fff;
+}
+
+.radio-label:hover {
+  background: #555;
+}
+
+.form-submit {
+  width: 100%;
+  background: #ff4444;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.form-submit:hover {
+  background: #cc3333;
+  box-shadow: 0 0 15px #ff6666;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+  margin-bottom: 20px;
+}
+
+/* 動画のレスポンシブ対応 */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2em;
+  }
+  nav ul li {
+      display: block;
+      margin: 10px 0;
+  }
+  .hero {
+      padding: 50px 20px;
+      min-height: 300px;
+  }
+  .hero h2 {
+      font-size: 2em;
+  }
+  .hero p {
+      font-size: 1.2em;
+  }
+  .gallery, .winners-gallery {
+      grid-template-columns: 1fr;
+  }
+  .join-content {
+      max-width: 100%;
+  }
+  .hero-content {
+      padding: 10px;
+  }
+  .mobile-break {
+      display: block; /* スマホで改行 */
+  }
+  .hero-title-part1, .hero-title-part2 {
+      display: inline; /* 連続性を保つ */
+  }
+}
+
+/* PC表示用 */
+@media (min-width: 769px) {
+  .mobile-break {
+      display: none; /* PCでは改行しない */
+  }
+  .hero-title-part1, .hero-title-part2 {
+      display: inline; /* 通常のインライン表示 */
+  }
+}
