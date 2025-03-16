@@ -7,15 +7,11 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>バトルトリニティ大会 - 参加フォーム</h1>
+    <header class="fixed-header">
+        <h1 class="event-title">バトルトリニティ大会<span class="sp-break"></span>参加フォーム</h1>
         <nav>
             <ul>
-                <li><a href="index.html#home">ホーム</a></li>
-                <li><a href="index.html#events">活動内容</a></li>
-                <li><a href="index.html#winners">優勝者</a></li>
-                <li><a href="index.html#overview">大会概要</a></li>
-                <li><a href="index.html#join">参加案内</a></li>
+                <li><a href="index.html#home">トップに戻る</a></li>
             </ul>
         </nav>
     </header>
@@ -25,12 +21,12 @@
             <h2 class="form-title">参加フォーム</h2>
             <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="post" class="join-form">
                 <div class="form-group">
-                    <label for="team-name">チーム名:</label>
+                    <label for="team-name">チーム名:<span class="required">(必須)</span></label>
                     <input type="text" id="team-name" name="entry.123456789" required class="form-input">
                 </div>
 
                 <div class="form-group">
-                    <label for="leader-name">リーダー名:</label>
+                    <label for="leader-name">リーダー名:<span class="required">(必須)</span></label>
                     <input type="text" id="leader-name" name="entry.987654321" required class="form-input">
                 </div>
 
@@ -55,7 +51,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="members">メンバー (4人分の名前):</label>
+                    <label for="members">メンバー (4人以上の名前)<span class="required">(必須)</span>:</label>
                     <textarea id="members" name="entry.444555666" rows="4" required class="form-textarea"></textarea>
                 </div>
 

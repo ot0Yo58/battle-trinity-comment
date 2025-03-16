@@ -33,4 +33,8 @@ $(document).ready(function() {
             $(this).css('box-shadow', 'none');
         }, 300);
     });
+    $('.back-to-top').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $('#home').offset().top }, 500);
+    });
 });
