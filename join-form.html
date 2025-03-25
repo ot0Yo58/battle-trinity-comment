@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>バトルトリニティ大会 - 参加フォーム</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header class="fixed-header">
+<!DOCTYPE html> <!-- htmlファイルであることを宣言*[maybe] -->
+<html lang="ja"> <!-- 日本語ですよを伝えてる（何に伝えてるのかはわからない）-->
+<head><!-- ウェブサイトの設定部分という認識[maybe] -->
+    <meta charset="UTF-8"> <!-- 文字コードの宣言 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--これを使いますよ！って感じなのかな？よくわからないです[NG]-->
+    <title>バトルトリニティ大会 - 参加フォーム</title><!-- 検索エンジンのタブに書かれる文字列 -->
+    <link rel="stylesheet" href="css/styles.css"><!-- このスタイルシートを使いますという宣言 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head><!-- ここまでがヘッドタグですよ -->
+<body><!-- ホームページに書かれる内容。メイン。 -->
+    <header class="fixed-header"><!--ホームページのヘッダー部分の定義。クラスをfixed-headerに属させた-->
         <h1 class="event-title">バトルトリニティ大会<span class="sp-break"></span>参加フォーム</h1>
         <nav>
             <ul>
@@ -50,9 +51,25 @@
                     </div>
                 </div>
 
+                <!-- メンバーの入力欄をtextareaから4つのinputに変更 -->
                 <div class="form-group">
-                    <label for="members">メンバー (4人以上の名前)<span class="required">(必須)</span>:</label>
-                    <textarea id="members" name="entry.444555666" rows="4" required class="form-textarea"></textarea>
+                    <label>メンバー (4人の名前)<span class="required">(必須)</span>:</label>
+                    <div class="form-group">
+                        <label for="member1">メンバー1:</label>
+                        <input type="text" id="member1" name="entry.444555666_1" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="member2">メンバー2:</label>
+                        <input type="text" id="member2" name="entry.444555666_2" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="member3">メンバー3:</label>
+                        <input type="text" id="member3" name="entry.444555666_3" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="member4">メンバー4:</label>
+                        <input type="text" id="member4" name="entry.444555666_4" required class="form-input">
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -60,7 +77,7 @@
                     <textarea id="remarks" name="entry.000111222" rows="3" class="form-textarea"></textarea>
                 </div>
 
-                <button type="submit" class="btn form-submit">送信</button>
+                <button type="submit" class="btn form-submit" disabled>送信</button>
             </form>
         </section>
     </div>

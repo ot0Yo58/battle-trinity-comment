@@ -360,6 +360,18 @@ footer {
   background: #cc3333;
   box-shadow: 0 0 15px #ff6666;
 }
+
+/* 送信ボタンが無効化されているときのスタイル */
+.form-submit:disabled {
+  background: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.form-submit:disabled:hover {
+  background: #666;
+  box-shadow: none;
+}
+
 .video-container {
   position: relative;
   width: 100%;
