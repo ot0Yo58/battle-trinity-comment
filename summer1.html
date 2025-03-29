@@ -1,46 +1,46 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第一回バトルトリニティサマーカップ</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!DOCTYPE html><!-- htmlファイルであることを宣言*[maybe] -->
+<html lang="ja"><!-- 日本語ですよを伝えてる（何に伝えてるのかはわからない）-->
+<head><!-- ウェブサイトの設定部分という認識[maybe] -->
+    <meta charset="UTF-8"><!-- 文字コードの宣言 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--これを使いますよ！って感じなのかな？よくわからないです[NG]-->
+    <title>第一回バトルトリニティサマーカップ</title><!-- 検索エンジンのタブに書かれる文字列 -->
+    <link rel="stylesheet" href="css/styles.css"><!-- このスタイルシートを使いますという宣言 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><!--jquery読み込み-->
 </head>
 <body>
-    <header class="fixed-header">
-        <h1 class="event-title">第一回バトルトリニティ<span class="sp-break"></span>サマーカップ</h1>
+    <header class="fixed-header"><!--ホームページのヘッダー部分の定義。クラスをfixed-headerに属させた-->
+        <h1 class="event-title">第一回バトルトリニティ<span class="sp-break"></span>サマーカップ</h1><!--ページの案内。SP番だと "サマーカップ" が改行される-->
         <nav>
             <ul>
-                <li><a href="index.html#home">ホーム</a></li>
-                <li><a href="index.html#events">活動内容</a></li>
-                <li><a href="index.html#winners">優勝者</a></li>
-                <li><a href="index.html#overview">大会概要</a></li>
+                <li><a href="index.html#home">ホーム</a></li><!--ホームという文字列をクリックするとindex.htmlの#homeに飛ぶことができる-->
+                <li><a href="index.html#events">活動内容</a></li><!--活動内容という文字列をクリックするとindex.htmlの#eventsに飛ぶことができる-->
+                <li><a href="index.html#winners">優勝者</a></li><!--優勝者というリンクをクリックするとindex.htmlの#winnersに飛ぶことができる-->
+                <li><a href="index.html#overview">大会概要</a></li><!--大会概要という文字列をクリックするとindex.htmlの#overviewに飛ぶことができる-->
             </ul>
         </nav>
     </header>
 
-    <div class="container">
+    <div class="container"><!--divはグループ化、どこのクラス所属させて一括でスタイルシートの情報を適応させるのに便利-->
         <section>
             <h2>大会詳細</h2>
             <p>開催日: 2023年07月29日</p>
             <p>場所: SERVER21</p>
             <p>優勝チーム: 南瓜軍団(仮)</p>
             <h3>PV動画</h3>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Tohq7YIjAd0?si=NwMLsz9t_JVJxVSf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container"><!--このdivのcssにvideo-containerを適応-->
+                    <iframe src="https://www.youtube.com/embed/Tohq7YIjAd0?si=NwMLsz9t_JVJxVSf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><!--youtubeの動画貼り付け-->
                 </div>
             <h3>大会動画</h3>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/g8l534Cr3Rs?si=g-KjY9JZcr312vvh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container"><!--このdivのcssにvideo-containerを適応-->
+                    <iframe src="https://www.youtube.com/embed/g8l534Cr3Rs?si=g-KjY9JZcr312vvh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><!--youtubeの動画貼り付け-->
                 </div>
         </section>
     </div>
 
     <footer>
-        <p>© 2025 バトルトリニティ大会</p>
+        <p>© 2025 バトルトリニティ大会</p><!--コピーライトをつけてそれっぽさを演出-->
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script><!--自分で記載したjavascriptの定義-->
 </body>
 </html>

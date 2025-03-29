@@ -1,522 +1,521 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
-  padding-top: 170px;
+  margin: 0; /* headerとbodyの間の隙間？[maybe] */
+  font-family: Arial, sans-serif; /* フォントの選択familyはわからない[NG] */
+  background-color: #1a1a1a; /* 背景の選択 */
+  color: #fff; /* 文字列の色[maybe] */
+  padding-top: 170px; /* わからない */
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  margin-top: 0;
+  max-width: 1000px; /* 両サイドのマックスをどれくらいにするか[maybe] */
+  margin: 0 auto; /* 隙間autoは画像サイズによって合わせるってこと[maybe] */
+  padding: 0 20px;/* わからない [NG]*/
+  margin-top: 0;/* 上の隙間 [maybe]*/
 }
 
-header {
-  background: #000;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #ff4444;
-  margin-bottom: 20px;
+header {/*headerのスタイルシート*/
+  background: #000;/* 背景の色 */
+  padding: 20px;/* わからない [NG]*/
+  text-align: center;/* テキストの設置位置設定[maybe]*/
+  border-bottom: 2px solid #ff4444;/*headerの下の境界線の色*/
+  margin-bottom: 20px;/*headerとbodyの間隔*/
 }
 
-header.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #000;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #ff4444;
-  margin-bottom: 20px;
-  z-index: 1000;
-  box-sizing: border-box;
+header.fixed-header {/* わからない [NG]*/
+  position: fixed;/* 設置位置指定 [maybe]*/
+  top: 0;/* 領域指定。上にどれくらい伸ばすか [maybe] */
+  left: 0;/* 領域指定。左にどれくらい伸ばすか [maybe] */
+  width: 100%;/* 指定した領域を両サイドどれくらい表示させるか[maybe] */
+  background: #000;/* 背景の色 */
+  padding: 20px;/* わからない [NG]*/
+  text-align: center;/* テキストの設置位置設定[maybe]*/
+  border-bottom: 2px solid #ff4444;/*headerの下の境界線の色*/
+  margin-bottom: 20px;/*headerとbodyの間隔*/
+  z-index: 1000;/* わからない [NG]*/
+  box-sizing: border-box;/* わからない [NG]*/
 }
 
 nav {
-  text-align: center; /* 中央揃えを再確認 */
-  padding: 5px 0; /* 赤線との距離を詰める */
+  text-align: center; /* テキストの設置位置設定[maybe]*/
+  padding: 5px 0; /* わからない [NG]*/
 }
 
 h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #ff4444;
-  display: inline-block;
-  white-space: nowrap;
+  margin: 0; /* 隙間[maybe] */
+  font-size: 2.5em;/* 文字の大きさ */
+  color: #ff4444;/* 文字の色 */
+  display: inline-block;/* フォント[maybe] */
+  white-space: nowrap;/* わからない [NG]*/
 }
 
 .event-title {
-  font-size: 2.5em; /* デフォルトはindex.htmlと同じ */
-  color: #ff4444;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: visible;
+  font-size: 2.5em; /* 文字サイズ */
+  color: #ff4444; /*文字の色*/
+  display: inline-block;/* わからない [NG]*/
+  white-space: nowrap;/* 改行を防ぐ */
+  overflow: visible;/* わからない [NG]*/
 }
 
 .sp-break {
-  display: none; /* デフォルトで非表示 */
+  display: none; /* わからないnoneだから "なし" ということはわかる [NG]*/
 }
 
 nav.sticky-nav {
-  position: sticky;
-  top: 0;
-  background: #000;
-  padding: 10px 0;
-  z-index: 1000;
-  border-bottom: 2px solid #ff4444;
+  position: sticky;/* headerがついてくるようにしてある [maybe]*/
+  top: 0;/* わからない [NG]*/
+  background: #000;/*背景黒*/
+  padding: 10;/* わからない [NG]*/
+  z-index: 1000;/* わからない [NG]*/
+  border-bottom: 2px solid #ff4444;/* headerの下部に線を追加 */
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-    justify-content: center;
+  list-style: none;/* わからない [NG]*/
+  padding: 0;/* わからない [NG]*/
+  display: flex;/* わからない [NG]*/
+    justify-content: center;/*中央揃え*/
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+  display: inline;/* わからない [NG]*/
+  margin: 0 15px;/* わからない [NG]*/
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+  color: #fff;/* 文字の色 */
+  text-decoration: none;/* わからない [NG]*/
+  font-weight: bold;/* わからない [NG]*/
   white-space: nowrap; /* 改行を防ぐ */
 }
 
 nav ul li a:hover {
-  color: #ff4444;
+  color: #ff4444;/* わからない [NG]*/
 }
 
 section {
-  margin-top: 0; /* セクション間の余計なマージンを削除 */ 
+  margin-top: 0; /* わからない [NG]*/ 
 }
 
 .hero {
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-bottom: 0;
-    min-height: 300px;
-    padding-bottom: 0; /* 黒背景の伸びを防ぐ */
+  text-align: center;/* 中央揃え */
+  padding: 100px 20px;/* わからない [NG]*/
+  position: relative;/* わからない [NG]*/
+  display: flex;/* わからない [NG]*/
+    flex-direction: column;/* わからない [NG]*/
+    justify-content: center;/* わからない [NG]*/
+    align-items: center;/* わからない [NG]*/
+    height: auto;/* 画像サイズを元データに合わせる [maybe]*/
+    margin-bottom: 0;/* 下側の隙間なし[maybe] */
+    min-height: 300px;/*高さの最小値を300pxに設定[maybe]*/
+    padding-bottom: 0; /* わからない [NG]*/
 }
 
 .hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* 黒背景を固定 */
-  z-index: 1; /* スライドショーより手前 */
-  opacity: 1; /* 固定 */
-  overflow: hidden; 
-  box-sizing: border-box; /* 高さを正確に */
+  content: '';/* わからない [NG]*/
+  position: absolute;/* わからない [NG]*/
+  top: 0;/*上部[maybe]*/
+  left: 0;/*左側[maybe]*/
+  width: 100%;/* わからない [NG]*/
+  height: 100%;/* わからない [NG]*/
+  background: rgba(0, 0, 0, 0.5); /* わからない [NG]*/
+  z-index: 1; /* わからない [NG]*/
+  opacity: 1; /* わからない [NG]*/
+  overflow: hidden; /* マウスを持ってきたときの処理 [maybe]*/
+  box-sizing: border-box; /* わからない [NG]*/
 }
 
 .slideshow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: none;
-  z-index: 0;
-  opacity: 1;
-  /*transition: opacity 2s ease;*/
+  position: absolute;/* わからない [NG]*/
+  top: 0;/*上部[maybe]*/
+  left: 0;/*左側[maybe]*/
+  width: 100%;/* わからない [NG]*/
+  height: 100%;/* わからない [NG]*/
+  background: none;/*背景なし[maybe]*/
+  z-index: 0;/* わからない [NG]*/
+  opacity: 1;/* わからない [NG]*/
 }
 
 .slideshow::after {
-  display: none; /* 不要なオーバーレイを削除 */
+  display: none; /* 表示なし[maybe] */
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 10px; /* 文字とボタンのスペースを確保 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* 幅を統一 */
+  position: relative;/* わからない [NG]*/
+  z-index: 2;/* わからない [NG]*/
+  text-align: center;/* 文字を中央揃え*/
+  padding: 10px; /* わからない [NG]*/
+  display: flex;/* わからない [NG]*/
+  flex-direction: column;/* わからない [NG]*/
+  justify-content: center;/* 何を中央揃えなのかわからない [NG]*/
+  align-items: center;/* 何を中央揃えなのかわからない [NG]*/
+  width: 100%; /* わからない [NG]*/
 }
 
 .hero h2 {
-  font-size: 3em;
-  margin: 0;
-  text-shadow: 2px 2px 4px #000;
+  font-size: 3em;/* 文字サイズ設定 */
+  margin: 0;/* 何の幅かわからないわからない [NG]*/
+  text-shadow: 2px 2px 4px #000;/* テキストの背景？わからない [NG]*/
 }
 
 .hero p {
-  font-size: 1.5em;
-  margin: 10px 0;
+  font-size: 1.5em;/*文字サイズ設定*/
+  margin: 10px 0;/* 何の隙間なのかわからない、0の意味わからない [NG]*/
 }
 
 .btn {
-  display: inline-block;
-  padding: 15px 30px;
-  background: #ff4444;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: box-shadow 0.3s ease;
+  display: inline-block;/* わからない [NG]*/
+  padding: 15px 30px;/* わからない [NG]*/
+  background: #ff4444;/* 背景色*/
+  color: #fff;/* 文字列の色*/
+  text-decoration: none;/* わからない [NG]*/
+  border-radius: 5px;/* わからない [NG]*/
+  font-weight: bold;/* わからない [NG]*/
+  transition: box-shadow 0.3s ease;/* わからない [NG]*/
 }
 
 .btn:hover {
-  background: #cc3333;
+  background: #cc3333;/*背景色*/
 }
 
 .gallery {
-  padding-top: 0; 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 10px 0;
-  margin-top: 0;
+  padding-top: 0; /* わからない [NG]*/
+  display: grid; /* わからない [NG]*/
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* わからない [NG]*/
+  gap: 10px;/* わからない [NG]*/
+  padding: 10px 0;/* わからない [NG]*/
+  margin-top: 0;/* 一番上からの隙間 [maybe]*/
 }
 
 .gallery-item {
-  position: relative;
-  text-decoration: none;
-  color: inherit;
+  position: relative;/* わからない [NG]*/
+  text-decoration: none;/* わからない [NG]*/
+  color: inherit;/* わからない [NG]*/
 }
 
 .gallery-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.2em;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  position: absolute;/* わからない [NG]*/
+  top: 0;/* 上部[maybe] */
+  left: 0;/* 左側[maybe] */
+  width: 100%;/* わからない [NG]*/
+  height: 100%;/* わからない [NG]*/
+  background: rgba(0, 0, 0, 0.6);/* 背景色はわかるが、rgbaがわからない [NG]*/
+  color: #fff;/*文字列の色*/
+  display: flex;/* わからない [NG]*/
+  align-items: center;/* 何を中央揃えにするかわからない [NG]*/
+  justify-content: center;/* 何を中央揃えにするかわからない [NG]*/
+  text-align: center;/* 文字列を中央揃えにする */
+  font-size: 1.2em;/* 文字フォントサイズ */
+  opacity: 0;/* わからない [NG]*/
+  transition: opacity 0.3s ease;/* わからない [NG]*/
 }
 
 .gallery-item:hover .overlay {
-  opacity: 1;
+  opacity: 1;/* わからない [NG]*/
 }
 
 .gallery-img {
-  width: 100%;
-  height: auto;
-  border: 2px solid #ff4444;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  width: 100%;/* わからない [NG]*/
+  height: auto;/* 画像の高さを画像サイズに合わせる */
+  border: 2px solid #ff4444;/* 画像を赤い線で囲う [maybe]*/
+  border-radius: 5px;/* わからない [NG]*/
+  cursor: pointer;/* わからない [NG]*/
+  transition: transform 0.3s ease;/* わからない [NG]*/
 }
 
 .winners-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 20px;
+  display: grid;/* わからない [NG]*/
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* わからない [NG]*/
+  gap: 10px;/* わからない [NG]*/
+  padding: 20px;/* わからない [NG]*/
 }
 
 .winner {
-  text-align: center;
+  text-align: center;/* 文字列の中央揃え */
 }
 
 .winner-name {
-  color: #ff4444;
-  margin: 5px 0;
-  font-size: 1.1em;
+  color: #ff4444;/* 文字列の色設定*/
+  margin: 5px 0;/* 何の隙間かわからない [NG]*/
+  font-size: 1.1em;/* 文字フォントサイズ */
 }
 
 .winner-menber {
-  color: #fff;
-  margin: 5px 0;
-  font-size: 1.1em;
+  color: #fff;/* 文字列の色 */
+  margin: 5px 0;/* 何の隙間かわからない [NG]*/
+  font-size: 1.1em;/* 文字フォントサイズ */
 }
 
 .overview-content {
-  padding: 20px;
+  padding: 20px;/* わからない [NG]*/
 }
 
 .overview-content h3 {
-  color: #ff4444;
-  margin-top: 20px;
+  color: #ff4444;/* 文字の色設定 */
+  margin-top: 20px;/* 上部の隙間[maybe] */
 }
 
 .overview-content p, .overview-content ul {
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 1.1em;/* 文字列のサイズ */
+  line-height: 1.6;/* わからない [NG]*/
 }
 
 .overview-content ul {
-  padding-left: 20px;
+  padding-left: 20px;/* わからない [NG]*/
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-  border-top: 2px solid #ff4444;
+  text-align: center; /* 文字の中央揃え */
+  padding: 20px;/* わからない [NG]*/
+  background: #000;/* 背景色 */
+  border-top: 2px solid #ff4444;/* footerの上部に赤い線を引く */
 }
 
 .form-section {
-  background: #222;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  margin: 20px 0;
+  background: #222;/* 背景色 */
+  padding: 30px;/* わからない [NG]*/
+  border-radius: 10px;/* わからない [NG]*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);/* わからない [NG]*/
+  margin: 20px 0;/* どこの隙間かわからないのと0の意味が分からない [NG]*/
 }
 
 .form-title {
-  color: #ff4444;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+  color: #ff4444;/* 文字列の色指定 */
+  text-align: center;/* 文字列の中央揃え */
+  margin-bottom: 20px;/* 下の隙間[maybe] */
+  font-size: 2em;/* 文字列のサイズ */
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 20px;/* 下側の隙間[maybe] */
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #ff9999;
-  font-weight: bold;
+  display: block; /* わからない [NG]*/
+  margin-bottom: 5px;/* 下側の隙間[maybe] */
+  color: #ff9999;/* 文字フォントの色 */
+  font-weight: bold;/* わからない [NG]*/
 }
 
 .required {
-  color: #ff4444;
+  color: #ff4444;/* 文字フォントの色 */
 }
 
 .form-input, .form-textarea {
-  width: 100%;
-  padding: 10px;
-  background: #333;
-  border: 2px solid #444;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 1em;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;/* わからない [NG]*/
+  padding: 10px;/* わからない [NG]*/
+  background: #333;/*背景色*/
+  border: 2px solid #444;/* わからない [NG]*/
+  border-radius: 5px;/* わからない [NG]*/
+  color: #fff;/* 文字の色指定 */
+  font-size: 1em;/* 文字のサイズ指定 */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;/* わからない [NG]*/
 }
 
 .form-input:focus, .form-textarea:focus {
-  border-color: #ff4444;
-  box-shadow: 0 0 10px #ff6666;
-  outline: none;
+  border-color: #ff4444;/* わからない [NG]*/
+  box-shadow: 0 0 10px #ff6666;/* わからない [NG]*/
+  outline: none;/* わからない [NG]*/
 }
 
 .radio-group {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+  display: flex;/* わからない [NG]*/
+  gap: 20px;/* わからない [NG]*/
+  align-items: center;/* わからない [NG]*/
 }
 
 .radio-input {
-  display: none;
+  display: none;/* わからない [NG]*/
 }
 
 .radio-label {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  cursor: pointer;
-  padding: 5px 10px;
-  background: #444;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  display: flex;/* わからない [NG]*/
+  align-items: center;/* わからない [NG]*/
+  color: #fff;/* 文字の色指定 */
+  cursor: pointer;/* わからない [NG]*/
+  padding: 5px 10px;/* わからない [NG]*/
+  background: #444;/* 背景の色指定 */
+  border-radius: 5px;/* わからない [NG]*/
+  transition: background 0.3s ease;/* わからない [NG]*/
 }
 
 .radio-input:checked + .radio-label {
-  background: #ff4444;
-  color: #fff;
+  background: #ff4444;/* 背景色指定 */
+  color: #fff; /* 文字の色指定 */
 }
 
 .radio-label:hover {
-  background: #555;
+  background: #555;/* 背景色指定 */
 }
 
 .form-submit {
-  width: 100%;
-  background: #ff4444;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2em;
+  width: 100%;/* わからない [NG]*/
+  background: #ff4444;/* 背景色指定 */
+  border: none;/* わからない [NG]*/
+  cursor: pointer;/* わからない [NG]*/
+  font-size: 1.2em;/* 文字フォントサイズ指定 */
 }
 
 .form-submit:hover {
-  background: #cc3333;
-  box-shadow: 0 0 15px #ff6666;
+  background: #cc3333; /*背景色指定*/
+  box-shadow: 0 0 15px #ff6666;/* わからない [NG]*/
 }
 
-/* 送信ボタンが無効化されているときのスタイル */
+
 .form-submit:disabled {
-  background: #666;
-  cursor: not-allowed;
-  box-shadow: none;
+  background: #666;/* 背景色指定 */
+  cursor: not-allowed;/* わからない [NG]*/
+  box-shadow: none;/* わからない [NG]*/
 }
 .form-submit:disabled:hover {
-  background: #666;
-  box-shadow: none;
+  background: #666;/* 背景色指定 */
+  box-shadow: none;/* わからない [NG]*/
 }
 
 .video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9のアスペクト比 */
-  margin-bottom: 20px;
+  position: relative;/* わからない [NG]*/
+  width: 100%;/* わからない [NG]*/
+  padding-bottom: 56.25%;/* わからない [NG]*/
+  margin-bottom: 20px;/* 下の隙間[maybe] */
 }
 
 /* 動画のレスポンシブ対応 */
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+  position: absolute;/* わからない [NG]*/
+  top: 0;/* 上部[maybe] */
+  left: 0;/* 左側 [maybe]*/
+  width: 100%;/* わからない [NG]*/
+  height: 100%;/* わからない [NG]*/
+  border: none;/* わからない [NG]*/
 }
 
 /* トップに戻るボタン */
 
 .back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background: #ff4444;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 50%;
-  font-size: 1.2em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  transition: background 0.3s ease;
+  position: fixed;/* わからない [NG]*/
+  bottom: 20px;/* 下側 */
+  right: 20px;/* 右側 */
+  padding: 10px 20px;/* わからない [NG]*/
+  background: #ff4444;/* 背景色指定*/
+  color: #fff;/* 文字列の色指定*/
+  text-decoration: none;/* わからない [NG]*/
+  border-radius: 50%;/* わからない [NG]*/
+  font-size: 1.2em;/* 文字サイズ指定*/
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);/* わからない [NG]*/
+  z-index: 1000;/* わからない [NG]*/
+  transition: background 0.3s ease;/* わからない [NG]*/
 }
 
 .back-to-top:hover {
-  background: #cc3333;
+  background: #cc3333;/* 背景色指定 */
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) and (orientation: portrait) {
+
+@media (max-width: 768px) and (orientation: portrait) {/* レスポンシブ対応スマホで見た時にどうなるかの設定 */
   body{
-    padding-top: 110px; /* SP縦持ちを再調整 */
+    padding-top: 110px; /* わからない [NG]*/
       
   }
   header.fixed-header {
-    padding: 10px; /* ヘッダーを小さく */
+    padding: 10px; /* わからない [NG]*/
 }
   h1 {
-      font-size:1.8em;
+      font-size:1.8em; /* 文字サイズ指定 */
   }
   
   .event-title {
-    font-size: 1.5em; /* SPで小さく */
+    font-size: 1.5em; /* 文字サイズ指定 */
 }
 
 .sp-break {
-  display: block; /* SP縦持ちで改行 */
+  display: block; /* わからない [NG]*/
 }
 
   nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap; /* 横に固定 */
-    overflow-x: auto; /* 必要なら横スクロール */
-    -webkit-overflow-scrolling: touch; /* スムーズスクロール */
+    display: flex;/* わからない [NG]*/
+    justify-content: center;/* わからない [NG]*/
+    flex-wrap: nowrap; /* わからない [NG]*/
+    overflow-x: auto; /* わからない [NG]*/
+    -webkit-overflow-scrolling: touch; /* わからない [NG]*/
 }
   nav ul li {
-      display: block;
-      margin: 0 5px;
+      display: block;/* わからない [NG]*/
+      margin: 0 5px;/* どこの隙間かわからない [NG]*/
   }
   .hero {
-      padding: 20px 10px;
-      min-height: 120px; /* summer1.jpgの高さに仮設定 */
-        height: auto;
-      margin-bottom: 0;
-      height: auto; /* 内容に依存 */
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 20px 10px;/* わからない [NG]*/
+      min-height: 120px; /* 高さの最低値設定 */
+        height: auto;/* 高さを画像サイズに合わせる */
+      margin-bottom: 0;/* 下の隙間[maybe] */
+      height: auto; /* 高さを画像サイズに合わせる ...もしかしていらない？[maybe]*/
+      display: flex;/* わからない [NG]*/
+      justify-content: center;/* 何の中央揃えかわからない [NG]*/
+      align-items: center;/* 何の中央揃えかわからない [NG]*/
   }
   .hero::after {
-    height: 100%; /* .slideshowに合わせる */
-    min-height: 120px; /* 最低限の高さを確保 */
+    height: 100%; /* わからない [NG]*/
+    min-height: 120px; /* 高さの最低値設定 */
 }
   .hero h2 {
-      font-size: 1.3em;
+      font-size: 1.3em;/* 文字サイズ指定 */
   }
   .hero p {
-      font-size: 0.9em;
+      font-size: 0.9em;/* 文字サイズ指定 */
   }
   .btn {
-    padding: 10px 20px; /* ボタンを小さく */
+    padding: 10px 20px; /* わからない [NG]*/
 }
   .gallery{
-    padding-top: 0;
-    padding: 5px 0;
-    grid-template-columns: 1fr;
-    margin-top: 0;
-    padding-top: 0 !important;
+    padding-top: 0;/* わからない [NG]*/
+    padding: 5px 0;/* わからない [NG]*/
+    grid-template-columns: 1fr;/* わからない [NG]*/
+    margin-top: 0;/* 上部の隙間 [maybe]*/
+    padding-top: 0 !important;/* わからない [NG]*/
   }
   
   .winners-gallery {
-      grid-template-columns: 1fr;
-      padding: 5px 0;
+      grid-template-columns: 1fr;/* わからない [NG]*/
+      padding: 5px 0;/* わからない [NG]*/
   }
   .join-content {
-      max-width: 100%;
+      max-width: 100%;/*高さの最大値指定[maybe]*/
   }
   .hero-content {
-    min-height: 120px;
+    min-height: 120px;/*高さの最低値位置指定*/
   }
   .slideshow {
-    height: 100%; /* .hero-contentに合わせる */
-    min-height: 120px; /* summer1.jpgの高さに仮設定 */
+    height: 100%; /* わからない [NG]*/
+    min-height: 120px; /*高さの最低値位置指定*/
 }
 
   .mobile-break {
-      display: block; /* スマホで改行 */
+      display: block; /* わからない [NG]*/
   }
   .hero-title-part1, .hero-title-part2 {
-      display: inline; /* 連続性を保つ */
-  }
-}
-/* SP横持ち */
-@media (max-width: 768px) and (orientation: landscape) {
-  body {
-    padding-top: 100px; /* SP横持ちを再調整 */
+      display: inline; /* わからない [NG]*/
   }
 }
 
-/* PC表示用 */
-@media (min-width: 769px) and (orientation: landscape) {
+@media (max-width: 768px) and (orientation: landscape) {/* スマホ版の横持ちの設定 */
   body {
-    padding-top: 170px; /* PC横持ちを再調整 */
+    padding-top: 100px; /* わからない [NG]*/
+  }
+}
+
+
+@media (min-width: 769px) and (orientation: landscape) {/*PC版の設定。もしかして不要？[maybe]*/
+  body {
+    padding-top: 170px; /* わからない [NG]*/
   }
 }
 
 @media (min-width: 769px) {
   .mobile-break {
-    display: none;
+    display: none;/* わからない [NG]*/
   }
   .hero-title-part1, .hero-title-part2 {
-      display: inline; /* 通常のインライン表示 */
+      display: inline; /* わからない [NG]*/
   }
   body {
-    padding-top: 170px; /* PCを再調整 */
+    padding-top: 170px; /* わからない [NG]*/
 }
 }
