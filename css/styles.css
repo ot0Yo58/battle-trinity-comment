@@ -1,63 +1,90 @@
 body {
   margin: 0; /* headerとbodyの間の隙間？[maybe] */
+  /* borderの外側の上下左右の隙間。marginにはデフォルト値が設定されているため、0pxを指定 */
   font-family: Arial, sans-serif; /* フォントの選択familyはわからない[NG] */
+  /*要素内で使用するフォントの指定、複数指定する理由としては、端末ごとに内蔵されているフォントが違うため*/
   background-color: #1a1a1a; /* 背景の選択 */
   color: #fff; /* 文字列の色[maybe] */
-  padding-top: 170px; /* わからない */
+  /* [maybeと相違なし]*/
+  padding-top: 170px; /* わからない [NG]*/
+/*borderの内側の上側170pxの隙間を指定*/
 }
 
 .container {
   max-width: 1000px; /* 両サイドのマックスをどれくらいにするか[maybe] */
+  /* 要素の最大表示幅の指定 */
   margin: 0 auto; /* 隙間autoは画像サイズによって合わせるってこと[maybe] */
+  /* ブロックレベル要素を中央揃えにする。 */
   padding: 0 20px;/* わからない [NG]*/
+  /* borderより内側左右20pxずつ隙間を指定 */
   margin-top: 0;/* 上の隙間 [maybe]*/
+  /* borderより外側上部の隙間を0pxに指定 */
 }
 
 header {/*headerのスタイルシート*/
   background: #000;/* 背景の色 */
   padding: 20px;/* わからない [NG]*/
+  /* borderより内側上下左右20pxずつ隙間を指定 */
   text-align: center;/* テキストの設置位置設定[maybe]*/
+  /*インライン要素を中央揃えにする*/
   border-bottom: 2px solid #ff4444;/*headerの下の境界線の色*/
   margin-bottom: 20px;/*headerとbodyの間隔*/
 }
 
 header.fixed-header {/* わからない [NG]*/
+  /*headerタグの "fixed-header" という要素であることを宣言*/
   position: fixed;/* 設置位置指定 [maybe]*/
+  /*画面スクロールの際、常に設置位置固定で指定*/
   top: 0;/* 領域指定。上にどれくらい伸ばすか [maybe] */
+  /*一番上に設置*/
   left: 0;/* 領域指定。左にどれくらい伸ばすか [maybe] */
+  /*一番左に設置*/
   width: 100%;/* 指定した領域を両サイドどれくらい表示させるか[maybe] */
+  /*両サイド最大値で設定*/
   background: #000;/* 背景の色 */
   padding: 20px;/* わからない [NG]*/
+  /* borderより内側左右20pxずつ隙間を指定 */
   text-align: center;/* テキストの設置位置設定[maybe]*/
+  /*インライン要素を中央揃えにする*/
   border-bottom: 2px solid #ff4444;/*headerの下の境界線の色*/
   margin-bottom: 20px;/*headerとbodyの間隔*/
   z-index: 1000;/* わからない [NG]*/
+  /*要素同士の重なりが発生した際の、優先順位を宣言し、数値を指定*/
   box-sizing: border-box;/* わからない [NG]*/
+  /* widthとheightにpaddingとborderを含ませることを宣言 */
 }
 
 nav {
   text-align: center; /* テキストの設置位置設定[maybe]*/
+  /*インライン要素を中央揃えにする*/
   padding: 5px 0; /* わからない [NG]*/
+  /* borderより内側上下5pxずつ隙間を指定 */
 }
 
 h1 {
   margin: 0; /* 隙間[maybe] */
+  /*borderの外側の上下左右の隙間。*/
   font-size: 2.5em;/* 文字の大きさ */
   color: #ff4444;/* 文字の色 */
   display: inline-block;/* フォント[maybe] */
+  /*表示形式をインラインとブロックとする*/
   white-space: nowrap;/* わからない [NG]*/
+  /* 文字列を折り返し表示させない */
 }
 
 .event-title {
   font-size: 2.5em; /* 文字サイズ */
   color: #ff4444; /*文字の色*/
   display: inline-block;/* わからない [NG]*/
+  /*表示形式をインラインとブロックとする*/
   white-space: nowrap;/* 改行を防ぐ */
   overflow: visible;/* わからない [NG]*/
+  /*要素のボックスから文字がはみ出た場合、表示される場合がある。この場合は、折り返し表示が無効となっているため、横にはみ出る*/
 }
 
 .sp-break {
   display: none; /* わからないnoneだから "なし" ということはわかる [NG]*/
+  /*非表示。SP版でのみ改行とするため、デフォルト値は非表示とする*/
 }
 
 nav.sticky-nav {

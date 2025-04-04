@@ -1,8 +1,12 @@
 <!DOCTYPE html><!-- htmlファイルであることを宣言*[maybe] -->
-<html lang="ja"><!-- 日本語ですよを伝えてる（何に伝えてるのかはわからない）-->
+<!-- html5表示の指定 -->
+<html lang="ja"><!-- 日本語ですよを伝えてる（何に伝えてるのかはわからない）[NG]-->
+    <!-- ページに書かれた言語が日本語であることを宣言-->
 <head><!-- ウェブサイトの設定部分という認識[maybe] -->
+    <!-- メタ情報を書き込む場所、どこのサイトから情報を引っ張ってきているかなど... -->
     <meta charset="UTF-8"><!-- 文字コードの宣言 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--これを使いますよ！って感じなのかな？よくわからないです[NG]-->
+    <!--viewportとは、書き込むことができる場所のこと。widthはviewportの大きさ上の広さの指定、width=device-widthは機種の液晶画面によって、広さを合わせるよう指定、initial-scale=1.0はページを読み込んだ際の拡大率この場合は100%-->
     <title>バトルトリニティ大会</title><!-- 検索エンジンのタブに書かれる文字列 -->
     <link rel="stylesheet" href="css/styles.css"><!-- このスタイルシートを使いますという宣言 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><!--jquery読み込み-->
@@ -12,6 +16,7 @@
         <h1>バトルトリニティ大会</h1><!--大項目-->
         <nav><!--navタグ宣言-->
             <ul><!--小分けにできるタグという認識[maybe]-->
+                <!--<ul>タグは箇条書きしますよという宣言で、liや-->
                 <li><a href="#home">ホーム</a></li><!--ホームという文字列をクリックすると#homeに飛ぶことができる-->
                 <li><a href="#events">活動内容</a></li><!--活動内容という文字列をクリックすると#eventsに飛ぶことができる-->
                 <li><a href="#winners">優勝者</a></li><!--優勝者というリンクをクリックすると#winnersに飛ぶことができる-->
@@ -37,18 +42,19 @@
             <div class="gallery"><!--galleryクラスに所属させたdivタグ-->
                 <a href="summer1.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
                     <img src="images/summer1.jpg" alt="第一回サマーカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの[NG]-->
+                    <!--altタグは画像が読み込みで不可である場合、代替として文字列を表示させる属性-->
                     <div class="overlay">第一回<br>バトルトリニティ<br>サマーカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
                 </a><!--aタグの終わり-->
                 <a href="winter1.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
-                    <img src="images/winter1.jpg" alt="第一回ウィンターカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの[NG]-->
+                    <img src="images/winter1.jpg" alt="第一回ウィンターカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの-->
                     <div class="overlay">第一回<br>バトルトリニティ<br>ウィンターカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
                 </a><!--aタグの終わり-->
                 <a href="summer2.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
-                    <img src="images/summer2.jpg" alt="第二回サマーカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの[NG]-->
+                    <img src="images/summer2.jpg" alt="第二回サマーカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの-->
                     <div class="overlay">第二回<br>バトルトリニティ<br>サマーカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
                 </a><!--aタグの終わり-->
                 <a href="winter2.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
-                    <img src="images/winter2.jpg" alt="第二回ウィンターカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの[NG]-->
+                    <img src="images/winter2.jpg" alt="第二回ウィンターカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの-->
                     <div class="overlay">第二回<br>バトルトリニティ<br>ウィンターカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
                 </a><!--aタグの終わり-->
             </div><!--galleryクラスに所属させたdivタグの終わり-->
