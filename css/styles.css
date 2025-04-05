@@ -36,9 +36,9 @@ header.fixed-header {/* わからない [NG]*/
   position: fixed;/* 設置位置指定 [maybe]*/
   /*画面スクロールの際、常に設置位置固定で指定*/
   top: 0;/* 領域指定。上にどれくらい伸ばすか [maybe] */
-  /*一番上に設置*/
+  /*一番上からどれぐらい離れた設置に設置するか指定*/
   left: 0;/* 領域指定。左にどれくらい伸ばすか [maybe] */
-  /*一番左に設置*/
+  /*一番左からどれぐらい離れた設置に設置するか指定*/
   width: 100%;/* 指定した領域を両サイドどれくらい表示させるか[maybe] */
   /*両サイド最大値で設定*/
   background: #000;/* 背景の色 */
@@ -88,128 +88,196 @@ h1 {
 }
 
 nav.sticky-nav {
-  position: sticky;/* headerがついてくるようにしてある [maybe]*/
+  position: sticky;/* headerがついてくるようにしてある [maybe]
+  /* 要素の範囲内でのみ、表示場所が固定して表示される。 */
   top: 0;/* わからない [NG]*/
+/*一番上からどれぐらい離れた設置に設置するか指定*/
   background: #000;/*背景黒*/
   padding: 10;/* わからない [NG]*/
+  /* borderより内側上下左右10pxずつ隙間を指定 */
   z-index: 1000;/* わからない [NG]*/
+  /*要素同士の重なりが発生した際の、優先順位を宣言し、数値を指定*/
   border-bottom: 2px solid #ff4444;/* headerの下部に線を追加 */
 }
 
 nav ul {
   list-style: none;/* わからない [NG]*/
+  /*liタグの点を消すよう指定*/
   padding: 0;/* わからない [NG]*/
+  /* paddingのデフォルト値を0に初期化する */
   display: flex;/* わからない [NG]*/
-    justify-content: center;/*中央揃え*/
+  /* 行ではなく列を増やすよう指定 */
+  justify-content: center;/*中央揃え*/
+  /*箇条書きした要素を中央揃えにする*/
 }
 
 nav ul li {
   display: inline;/* わからない [NG]*/
+  /*表示方法をインライン要素として指定*/
   margin: 0 15px;/* わからない [NG]*/
+  /*左右15pxずつ隙間を指定*/
 }
 
 nav ul li a {
   color: #fff;/* 文字の色 */
   text-decoration: none;/* わからない [NG]*/
+  /* 下線を消す */
   font-weight: bold;/* わからない [NG]*/
+  /* 文字フォントの太さを太文字に指定 */
   white-space: nowrap; /* 改行を防ぐ */
 }
 
 nav ul li a:hover {
   color: #ff4444;/* わからない [NG]*/
+  /* 文字の色 */
 }
 
 section {
-  margin-top: 0; /* わからない [NG]*/ 
+  margin-top: 0; /* わからない [NG]*/
+  /*borderから外側の上部の隙間を０に初期化*/
 }
 
 .hero {
-  text-align: center;/* 中央揃え */
+  text-align: center;/* インライン要素を中央揃えに指定 */
   padding: 100px 20px;/* わからない [NG]*/
+  /* borderより内側上下100px左右20pxずつ隙間を指定 */
   position: relative;/* わからない [NG]*/
+  /*要素の重なりや移動の概念を指定*/
   display: flex;/* わからない [NG]*/
-    flex-direction: column;/* わからない [NG]*/
-    justify-content: center;/* わからない [NG]*/
-    align-items: center;/* わからない [NG]*/
-    height: auto;/* 画像サイズを元データに合わせる [maybe]*/
-    margin-bottom: 0;/* 下側の隙間なし[maybe] */
-    min-height: 300px;/*高さの最小値を300pxに設定[maybe]*/
-    padding-bottom: 0; /* わからない [NG]*/
+  /*インライン要素を均等配置指定*/
+  flex-direction: column;/* わからない [NG]*/
+  /* フレックスアイテムを上から下へ並べるよう指定 */
+  justify-content: center;/* わからない [NG]*/
+  /*横並びになったフレックスアイテムを中央揃えに指定*/
+  align-items: center;/* わからない [NG]*/
+  /* フレックスアイテムを上下中央揃えに指定 */
+  height: auto;/* 画像サイズを元データに合わせる [maybe]*/
+  /* 文字列数や画像の大きさに合わせて高さを変化するよう指定 */
+  margin-bottom: 0;/* 下側の隙間なし[maybe] */
+  /*borderより外側の下部の隙間の数値を0に初期化*/
+  min-height: 300px;/*高さの最小値を300pxに設定[maybe]*/
+  /*autoで高さを指定しているが、最低値を300pxに指定*/
+  padding-bottom: 0; /* わからない [NG]*/
+  /*borderより内側の下部の隙間の数値を0に初期化*/
 }
 
 .hero::after {
+  /*疑似クラス。要素のコンテンツの最後に新しいコンテンツを追加する。*/
   content: '';/* わからない [NG]*/
+  /*空白文字列の宣言*/
   position: absolute;/* わからない [NG]*/
+  /*relativeのプロパティを持つ要素より上部に表示させるよう指定*/
   top: 0;/*上部[maybe]*/
+  /*最上部から表示させるよう指定*/
   left: 0;/*左側[maybe]*/
+  /*最も左側から表示させるよう指定*/
   width: 100%;/* わからない [NG]*/
+  /*親要素の幅に合わせるよう指定*/
   height: 100%;/* わからない [NG]*/
+  /*親要素の高さに合わせるよう指定*/
   background: rgba(0, 0, 0, 0.5); /* わからない [NG]*/
+  /*背景色と不透明度の指定。不透明度50の黒を指定*/
   z-index: 1; /* わからない [NG]*/
+  /* 要素同士の重なりった場合の優先度指定。数値が高いほど優先的に表示 */
   opacity: 1; /* わからない [NG]*/
+  /* 不透明度指定。1は不透明 */
   overflow: hidden; /* マウスを持ってきたときの処理 [maybe]*/
+  /* 文字や画像が要素からあふれてしまう場合、どう処理するか指定。hiddenのため非表示指定 */
   box-sizing: border-box; /* わからない [NG]*/
+  /* widthとheightにpaddingとborderを含ませることを宣言 */
 }
 
 .slideshow {
   position: absolute;/* わからない [NG]*/
+  /*relativeのプロパティを持つ要素より上部に表示させるよう指定*/
   top: 0;/*上部[maybe]*/
+  /*最上部から表示させるよう指定*/
   left: 0;/*左側[maybe]*/
+  /*最も左側から表示させるよう指定*/
   width: 100%;/* わからない [NG]*/
+  /*親要素の幅に合わせるよう指定*/
   height: 100%;/* わからない [NG]*/
+  /*親要素の高さに合わせるよう指定*/
   background: none;/*背景なし[maybe]*/
+  /*背景色なしを指定*/
   z-index: 0;/* わからない [NG]*/
+  /* 要素同士の重なりった場合の優先度指定。数値が高いほど優先的に表示 */
   opacity: 1;/* わからない [NG]*/
+  /* 不透明度指定。1は不透明 */
 }
 
 .slideshow::after {
   display: none; /* 表示なし[maybe] */
+  /*画面から非表示指定*/
 }
 
 .hero-content {
   position: relative;/* わからない [NG]*/
+  /*要素の重なりや移動の概念を指定*/
   z-index: 2;/* わからない [NG]*/
+  /* 要素同士の重なりった場合の優先度指定。数値が高いほど優先的に表示 */
   text-align: center;/* 文字を中央揃え*/
+  /* インライン要素を中央揃えに指定 */
   padding: 10px; /* わからない [NG]*/
+  /* borderより内側左右10pxずつ隙間を指定 */
   display: flex;/* わからない [NG]*/
+  /*インライン要素を均等配置指定*/
   flex-direction: column;/* わからない [NG]*/
+  /* フレックスアイテムを上から下へ並べるよう指定 */
   justify-content: center;/* 何を中央揃えなのかわからない [NG]*/
+  /*横並びになったフレックスアイテムを中央揃えに指定*/
   align-items: center;/* 何を中央揃えなのかわからない [NG]*/
+  /* フレックスアイテムを上下中央揃えに指定 */
   width: 100%; /* わからない [NG]*/
+  /*親要素の幅に合わせるよう指定*/
 }
 
 .hero h2 {
   font-size: 3em;/* 文字サイズ設定 */
   margin: 0;/* 何の幅かわからないわからない [NG]*/
+  /*borderの外側の上下左右の隙間。0に初期化を指定*/
   text-shadow: 2px 2px 4px #000;/* テキストの背景？わからない [NG]*/
+  /*影文字の数値の指定。4つの数値のうち左から、水平 垂直 ぼかしの長さ 色 を入力する。*/
 }
 
 .hero p {
   font-size: 1.5em;/*文字サイズ設定*/
   margin: 10px 0;/* 何の隙間なのかわからない、0の意味わからない [NG]*/
+  /*borderの外側の上下左右の隙間。上下に10pxの隙間を指定*/
 }
 
 .btn {
   display: inline-block;/* わからない [NG]*/
+  /* 要素をブロックに指定 */
   padding: 15px 30px;/* わからない [NG]*/
+  /*borderの内側の上下左右の隙間。上下15px、左右30pxの隙間を指定*/
   background: #ff4444;/* 背景色*/
   color: #fff;/* 文字列の色*/
   text-decoration: none;/* わからない [NG]*/
+  /*文字列の設定をすべて非表示に指定*/
   border-radius: 5px;/* わからない [NG]*/
+  /*borderの四隅を丸に指定。半径5pxで指定*/
   font-weight: bold;/* わからない [NG]*/
+  /* 文字フォントの太さを太文字に指定 */
   transition: box-shadow 0.3s ease;/* わからない [NG]*/
+  /* hoverなどの変化を付けた際に、変化にアニメーションを指定。box-shadowを0.3秒かけて徐々に偏差させるよう指定 */
 }
 
-.btn:hover {
+.btn:hover {/*.btnにマウスを重ねた際の要素*/
   background: #cc3333;/*背景色*/
 }
 
 .gallery {
   padding-top: 0; /* わからない [NG]*/
+  /*borderの内側の上側の隙間。初期値0を指定*/
   display: grid; /* わからない [NG]*/
+  /* 要素をグリッド指定 */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* わからない [NG]*/
+  /*グリッドの幅を自動で、要素の幅100%を使用して分割するよう指定。最低サイズが200px以下となると改行するよう指定。*/
   gap: 10px;/* わからない [NG]*/
+  /*グリッド間の高さ、幅の隙間を指定。高さ幅ともに10pxを指定*/
   padding: 10px 0;/* わからない [NG]*/
+    /*borderの内側の上下左右の隙間。上下10px、左右0pxの隙間を指定*/
   margin-top: 0;/* 一番上からの隙間 [maybe]*/
 }
 
@@ -254,6 +322,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* わからない [NG]*/
   gap: 10px;/* わからない [NG]*/
   padding: 20px;/* わからない [NG]*/
+    /*borderの内側の上下左右の隙間。上下左右20pxの隙間を指定*/
 }
 
 .winner {
@@ -274,6 +343,7 @@ section {
 
 .overview-content {
   padding: 20px;/* わからない [NG]*/
+    /*borderの内側の上下左右の隙間。上下左右20pxの隙間を指定*/
 }
 
 .overview-content h3 {
@@ -288,11 +358,13 @@ section {
 
 .overview-content ul {
   padding-left: 20px;/* わからない [NG]*/
+    /*borderの内側の左の隙間。20pxの隙間を指定*/
 }
 
 footer {
   text-align: center; /* 文字の中央揃え */
   padding: 20px;/* わからない [NG]*/
+    /*borderの内側の上下左右の隙間。上下左右20pxの隙間を指定*/
   background: #000;/* 背景色 */
   border-top: 2px solid #ff4444;/* footerの上部に赤い線を引く */
 }
@@ -300,6 +372,7 @@ footer {
 .form-section {
   background: #222;/* 背景色 */
   padding: 30px;/* わからない [NG]*/
+    /*borderの内側の上下左右の隙間。上下左右30pxの隙間を指定*/
   border-radius: 10px;/* わからない [NG]*/
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);/* わからない [NG]*/
   margin: 20px 0;/* どこの隙間かわからないのと0の意味が分からない [NG]*/
@@ -321,6 +394,7 @@ footer {
   margin-bottom: 5px;/* 下側の隙間[maybe] */
   color: #ff9999;/* 文字フォントの色 */
   font-weight: bold;/* わからない [NG]*/
+  /* 文字フォントの太さを太文字に指定 */
 }
 
 .required {
@@ -330,6 +404,7 @@ footer {
 .form-input, .form-textarea {
   width: 100%;/* わからない [NG]*/
   padding: 10px;/* わからない [NG]*/
+    /*borderの内側の上下左右の隙間。上下左右10pxの隙間を指定*/
   background: #333;/*背景色*/
   border: 2px solid #444;/* わからない [NG]*/
   border-radius: 5px;/* わからない [NG]*/
@@ -360,6 +435,7 @@ footer {
   color: #fff;/* 文字の色指定 */
   cursor: pointer;/* わからない [NG]*/
   padding: 5px 10px;/* わからない [NG]*/
+    /*borderの内側の上下左右の隙間。上下5px、左右10pxの隙間を指定*/
   background: #444;/* 背景の色指定 */
   border-radius: 5px;/* わからない [NG]*/
   transition: background 0.3s ease;/* わからない [NG]*/
@@ -422,6 +498,7 @@ footer {
   bottom: 20px;/* 下側 */
   right: 20px;/* 右側 */
   padding: 10px 20px;/* わからない [NG]*/
+  /*borderの内側の上下左右の隙間。上下10px、左右20pxの隙間を指定*/
   background: #ff4444;/* 背景色指定*/
   color: #fff;/* 文字列の色指定*/
   text-decoration: none;/* わからない [NG]*/
@@ -440,10 +517,12 @@ footer {
 @media (max-width: 768px) and (orientation: portrait) {/* レスポンシブ対応スマホで見た時にどうなるかの設定 */
   body{
     padding-top: 110px; /* わからない [NG]*/
+    /*borderの内側の上の隙間。上110pxの隙間を指定*/
       
   }
   header.fixed-header {
     padding: 10px; /* わからない [NG]*/
+      /*borderの内側の上下左右の隙間。上下左右10pxの隙間を指定*/
 }
   h1 {
       font-size:1.8em; /* 文字サイズ指定 */
@@ -470,6 +549,7 @@ footer {
   }
   .hero {
       padding: 20px 10px;/* わからない [NG]*/
+      /*borderの内側の上下左右の隙間。上下20px、左右10pxの隙間を指定*/
       min-height: 120px; /* 高さの最低値設定 */
         height: auto;/* 高さを画像サイズに合わせる */
       margin-bottom: 0;/* 下の隙間[maybe] */
@@ -490,10 +570,13 @@ footer {
   }
   .btn {
     padding: 10px 20px; /* わからない [NG]*/
+      /*borderの内側の上下左右の隙間。上下10px、左右20pxの隙間を指定*/
 }
   .gallery{
     padding-top: 0;/* わからない [NG]*/
+      /*borderの内側の上の隙間。上0pxを指定*/
     padding: 5px 0;/* わからない [NG]*/
+      /*borderの内側の上下左右の隙間。上下5px、左右0pxの隙間を指定*/
     grid-template-columns: 1fr;/* わからない [NG]*/
     margin-top: 0;/* 上部の隙間 [maybe]*/
     padding-top: 0 !important;/* わからない [NG]*/
@@ -502,6 +585,7 @@ footer {
   .winners-gallery {
       grid-template-columns: 1fr;/* わからない [NG]*/
       padding: 5px 0;/* わからない [NG]*/
+        /*borderの内側の上下左右の隙間。上下5px、左右0pxの隙間を指定*/
   }
   .join-content {
       max-width: 100%;/*高さの最大値指定[maybe]*/
@@ -525,6 +609,7 @@ footer {
 @media (max-width: 768px) and (orientation: landscape) {/* スマホ版の横持ちの設定 */
   body {
     padding-top: 100px; /* わからない [NG]*/
+      /*borderの内側の上下左右の隙間。上100pxの隙間を指定*/
   }
 }
 
@@ -532,6 +617,7 @@ footer {
 @media (min-width: 769px) and (orientation: landscape) {/*PC版の設定。もしかして不要？[maybe]*/
   body {
     padding-top: 170px; /* わからない [NG]*/
+      /*borderの内側の上下左右の隙間。上170pxの隙間を指定*/
   }
 }
 
@@ -544,5 +630,6 @@ footer {
   }
   body {
     padding-top: 170px; /* わからない [NG]*/
+      /*borderの内側の上下左右の隙間。上170pxの隙間を指定*/
 }
 }
