@@ -1,4 +1,5 @@
 $(document).ready(function() {/*関数宣言だけど、何を宣言してるかわからない[NG]*/
+    /*htmlが実行された後に、実行される関数*/
     const slideshowImages = [/* スライドショーに使う画像を４つ配列として定数で宣言 */
         'images/summer1.jpg',
         'images/winter1.jpg',
@@ -6,10 +7,11 @@ $(document).ready(function() {/*関数宣言だけど、何を宣言してるか
         'images/winter2.jpg'
     ];
     let currentImageIndex = 0;/* それぞれの画像に数字をあてがうために変数宣言[maybe] */
-
+    /*currentImageIndexという名前の変数を宣言。*/
     function updateSlideshow() {/* スライドショーの関数宣言 */
-        console.log('Fading out image:', slideshowImages[currentImageIndex]);/* どのスライドショーがフェードアウトされたかコンソールに表示させる。いらないかも。[maybe] */
-        $('.slideshow').animate({ opacity: 0 }, 2000, 'swing', function() {/* スライドショーにアニメーションを追加する関数 */
+        console.log('Fading out image:', slideshowImages[currentImageIndex]);/* どのスライドショーがフェードアウトされたかコンソールに表示させる。[maybe] */
+        /*フェードアウトされた画像がどれかコンソールへ表示するよう指定*/
+            $('.slideshow').animate({ opacity: 0 }, 2000, 'swing', function() {/* スライドショーにアニメーションを追加する関数 */
             currentImageIndex = (currentImageIndex + 1) % slideshowImages.length;/* slideshowImages.lengthがわからない [NG]*/
             $(this).css('background', `url('${slideshowImages[currentImageIndex]}') no-repeat center/contain`);/* わからない [NG]*/
             console.log('Fading in image:', slideshowImages[currentImageIndex]);/* どのスライドショーがフェードインされたかコンソールに表示させる。いらないかも。[maybe] */
