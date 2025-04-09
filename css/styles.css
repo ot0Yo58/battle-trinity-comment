@@ -1,253 +1,161 @@
-/** 🌸ここにスタイルが適用される要素の説明も入れましょう（他のクラスも） */
-/*コード全体に適応される基本設定の要素*/
+/*bodyスタイル*/
 body {
-  margin: 0; /* headerとbodyの間の余白？[maybe] */
-  /* borderの外側の上下左右の余白。marginにはデフォルト値が設定されているため、0pxを指定 */
-  font-family: Arial, sans-serif; /* フォントの選択familyはわからない[NG] */
-  /*要素内で使用するフォントの指定、複数指定する理由としては、端末ごとに内蔵されているフォントが違うため*/
-  background-color: #1a1a1a; /* 背景の選択 */
-  color: #fff; /* 文字列の色[maybe] */
-  /* [maybeと相違なし]*/
-  padding-top: 170px; /* わからない [NG]*/
-/*borderの内側の上側170pxの余白を指定*/
-/*🌸隙間は「余白」と書いて下さい。他の項目も横展開で修正して下さい。*/
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding-top: 170px; 
 }
-/** 🌸ここにクラスが適用される要素の説明も入れましょう（他のクラスも） */
-/*ホーム ~ 大会概要まですべてに適応される要素*/
+
+/*コンテンツエリア*/
 .container {
-  max-width: 1000px; /* 両サイドのマックスをどれくらいにするか[maybe] */
-  /* 要素の最大表示幅の指定 */
-  margin: 0 auto; /* 余白autoは画像サイズによって合わせるってこと[maybe] */
-  /* ブロックレベル要素を中央揃えにする。 */
-    /** 🌸横位置の中央か、縦位置の中央かを書きましょう */
-    /* ブロックレベル要素を横位置中央揃えにする。 */
-  padding: 0 20px;/* わからない [NG]*/
-  /* borderより内側左右20pxずつ余白を指定 */
-  margin-top: 0;/* 上の余白 [maybe]*/
-  /* borderより外側上部の余白を0pxに指定 */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 0;
 }
-/*ヘッダーに適応される要素*/
-header {/*headerのスタイルシート*/
-  background: #000;/* 背景の色 */
-  padding: 20px;/* わからない [NG]*/
-  /* borderより内側上下左右20pxずつ余白を指定 */
-  text-align: center;/* テキストの設置位置設定[maybe]*/
-  /*インライン要素を中央揃えにする*/
-  border-bottom: 2px solid #ff4444;/*headerの下の境界線の色*/
-  margin-bottom: 20px;/*headerとbodyの間隔*/
+
+/*headerスタイル*/
+header {
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff4444;
+  margin-bottom: 20px;
 }
-  /*headerタグの "fixed-header" のクラスだけ適応される要素。固定されたヘッダーのデザインを指定*/
+  /*header位置を固定するためのスタイル*/
 header.fixed-header {
-  position: fixed;/* 設置位置指定 [maybe]*/
-  /*画面スクロールの際、常に設置位置固定で指定*/
-  top: 0;/* 領域指定。上にどれくらい伸ばすか [maybe] */
-  /*🌸positionのプロパティの値が絶対位置の場合にのみ適応されることに注意*/
-  /*一番上からどれぐらい離れた設置に設置するか指定*/
-  left: 0;/* 領域指定。左にどれくらい伸ばすか [maybe] */
-  /*一番左からどれぐらい離れた設置に設置するか指定*/
-  width: 100%;/* 指定した領域を両サイドどれくらい表示させるか[maybe] */
-  /*両サイド最大値で設定*/
-  background: #000;/* 背景の色 */
-  padding: 20px;/* わからない [NG]*/
-  /* borderより内側左右20pxずつ余白を指定 */
-  text-align: center;/* テキストの設置位置設定[maybe]*/
-  /*インライン要素を中央揃えにする*/
-    /*🌸縦中央か横中央かを確認しましょう*/
-    /*インライン要素を横中央揃えにする*/
-  border-bottom: 2px solid #ff4444;/*headerの下の境界線の色*/
-  margin-bottom: 20px;/*headerとbodyの間隔*/
-  z-index: 1000;/* わからない [NG]*/
-  /*要素同士の重なりが発生した際の、優先順位を宣言し、数値を指定*/
-  box-sizing: border-box;/* わからない [NG]*/
-  /* widthとheightにpaddingとborderを含ませることを宣言 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff4444;
+  margin-bottom: 20px;
+  z-index: 1000;
+  box-sizing: border-box;
 }
-/*ナビゲーションを書き込む際に使うタグに適応するデザイン*/
+/*ナビゲーションエリア*/
 nav {
-  text-align: center; /* テキストの設置位置設定[maybe]*/
-  /*インライン要素を横中央揃えにする*/
-  padding: 5px 0; /* わからない [NG]*/
-  /* borderより内側上下5pxずつ余白を指定 */
+  text-align: center; 
+  padding: 5px 0;
 }
-/*h1はヘッダーに書かれる大項目にしか使用しないため、その大項目のデザインを指定*/
+/* ページタイトル */
 h1 {
-  margin: 0; /* 余白[maybe] */
-  /*borderの外側の上下左右の余白。*/
-  font-size: 2.5em;/* 文字の大きさ */
-  color: #ff4444;/* 文字の色 */
-  display: inline-block;/* フォント[maybe] */
-  /*表示形式をインラインとブロックとする*/
-  white-space: nowrap;/* わからない [NG]*/
-  /* 文字列を折り返し表示させない */
+  margin: 0; 
+  font-size: 2.5em;
+  color: #ff4444;
+  display: inline-block;
+  white-space: nowrap;
 }
-/* summer,winter.htmlそれぞれ4つのページのタイトルに適応する要素。PC表示の場合は改行をせずに、SP表示の場合は改行させるよう指定 */
+
+/* summer,winter.htmlそれぞれ4つのページタイトルの設定の要素 */
 .event-title {
-  font-size: 2.5em; /* 文字サイズ */
-  color: #ff4444; /*文字の色*/
-  display: inline-block;/* わからない [NG]*/
-  /*表示形式をインラインとブロックとする*/
-  white-space: nowrap;/* 改行を防ぐ */
-  overflow: visible;/* わからない [NG]*/
-  /*要素のボックスから文字がはみ出た場合、表示される場合がある。この場合は、折り返し表示が無効となっているため、横にはみ出る*/
+  font-size: 2.5em; 
+  color: #ff4444;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 /*SP版で改行させるために宣言。*/
 .sp-break {
-  display: none; /* わからないnoneだから "なし" ということはわかる [NG]*/
-  /*非表示。SP版でのみ改行とするため、デフォルト値は非表示とする*/
-}
-/*どれにも所属しない要素。不要。*/
-nav.sticky-nav {
-  position: sticky;/* headerがついてくるようにしてある [maybe]
-  /* 要素の範囲内でのみ、表示場所が固定して表示される。 */
-  top: 0;/* わからない [NG]*/
-/*一番上からどれぐらい離れた設置に設置するか指定*/
-  background: #000;/*背景黒*/
-  padding: 10;/* わからない [NG]*/
-  /* borderより内側上下左右10pxずつ余白を指定 */
-  z-index: 1000;/* わからない [NG]*/
-  /*要素同士の重なりが発生した際の、優先順位を宣言し、数値を指定*/
-  border-bottom: 2px solid #ff4444;/* headerの下部に線を追加 */
-}
-/*navタグで使用するulタグの設定。*/
-nav ul {
-  list-style: none;/* わからない [NG]*/
-  /*liタグの点を消すよう指定*/
-  padding: 0;/* わからない [NG]*/
-  /* paddingのデフォルト値を0に初期化する */
-  display: flex;/* わからない [NG]*/
-  /* 行ではなく列を増やすよう指定 */
-  justify-content: center;/*中央揃え*/
-  /*🌸縦中央か横中央かを確認しましょう*/
-  /*箇条書きした要素を横中央揃えにする*/
-}
-/*navタグで使用する箇条書きの文字列の設定。*/
-nav ul li {
-  display: inline;/* わからない [NG]*/
-  /*表示方法をインライン要素として指定*/
-  margin: 0 15px;/* わからない [NG]*/
-  /*左右15pxずつ余白を指定*/
-}
-/**navタグで使用する箇条書きの文字列のaタグの設定*/
-nav ul li a {
-  color: #fff;/* 文字の色 */
-  text-decoration: none;/* わからない [NG]*/
-  /* 下線を消す */
-  font-weight: bold;/* わからない [NG]*/
-  /* 文字フォントの太さを太文字に指定 */
-  white-space: nowrap; /* 改行を防ぐ */
+  display: none;
 }
 
- /*🌸このクラスが適用される場合はどんなアクションか書きましょう（他のCSSセレクタも）*/
- 
+/*ナビゲーションエリアの箇条書きのエリア設定*/
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+/*ナビゲーションエリアの箇条書きの文字列*/
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+/*ナビゲーションエリアの箇条書きのaタグの設定*/
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap; 
+}
+
+/*ナビゲーションエリアの箇条書きにマウスを合わせたときの要素*/
 nav ul li a:hover {
   color: #ff4444;/* わからない [NG]*/
   /* 文字の色 */
 }
 
+/*セクションノスタイル*/
 section {
-  margin-top: 0; /* わからない [NG]*/
-  /*borderから外側の上部の余白を０に初期化*/
+  margin-top: 0; 
 }
 
+/*スライドショーエリアの要素*/
 .hero {
-  text-align: center;/* インライン要素を横中央揃えに指定 */
-  padding: 100px 20px;/* わからない [NG]*/
-  /* borderより内側上下100px左右20pxずつ余白を指定 */
-  position: relative;/* わからない [NG]*/
-  /*要素の重なりや移動の概念を指定*/
-   /*🌸relativeはどんな概念か書いて下さい*/
-  display: flex;/* わからない [NG]*/
-  /*インライン要素を均等配置指定*/
-    /*🌸flexBoxの宣言ですね*/
-  flex-direction: column;/* わからない [NG]*/
-  /* フレックスアイテムを上から下へ並べるよう指定 */
-  justify-content: center;/* わからない [NG]*/
-  /*横並びになったフレックスアイテムを横中央揃えに指定*/
-  align-items: center;/* わからない [NG]*/
-  /* フレックスアイテムを縦中央揃えに指定 */
-  height: auto;/* 画像サイズを元データに合わせる [maybe]*/
-  /* 文字列数や画像の大きさに合わせて高さを変化するよう指定 */
-  margin-bottom: 0;/* 下側の余白なし[maybe] */
-  /*borderより外側の下部の余白の数値を0に初期化*/
-  min-height: 300px;/*高さの最小値を300pxに設定[maybe]*/
-  /*autoで高さを指定しているが、最低値を300pxに指定*/
-  padding-bottom: 0; /* わからない [NG]*/
-  /*borderより内側の下部の余白の数値を0に初期化*/
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 0;
+  min-height: 300px;
+  padding-bottom: 0;
 }
 
+/*スライドショーエリアが表示された後に処理される要素*/
 .hero::after {
-  /*疑似クラス。要素のコンテンツの最後に新しいコンテンツを追加する。*/
-  content: '';/* わからない [NG]*/
-  /*空白文字列の宣言*/
-  position: absolute;/* わからない [NG]*/
-  /*relativeのプロパティを持つ要素より上部に表示させるよう指定*/
-    /*🌸絶対位置指定です*/
-  top: 0;/*上部[maybe]*/
-  /*最上部から表示させるよう指定*/
-  left: 0;/*左側[maybe]*/
-  /*最も左側から表示させるよう指定*/
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  height: 100%;/* わからない [NG]*/
-  /*親要素の高さに合わせるよう指定*/
-  background: rgba(0, 0, 0, 0.5); /* わからない [NG]*/
-  /*背景色と不透明度の指定。不透明度50の黒を指定*/
-  z-index: 1; /* わからない [NG]*/
-  /* 要素同士の重なりった場合の優先度指定。数値が高いほど優先的に表示 */
-  opacity: 1; /* わからない [NG]*/
-  /* 不透明度指定。1は不透明 */
-  overflow: hidden; /* マウスを持ってきたときの処理 [maybe]*/
-  /* 文字や画像が要素からあふれてしまう場合、どう処理するか指定。hiddenのため非表示指定 */
-  box-sizing: border-box; /* わからない [NG]*/
-  /* widthとheightにpaddingとborderを含ませることを宣言 */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
+  opacity: 1; 
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
+/*スライドショーの要素*/
 .slideshow {
-  position: absolute;/* わからない [NG]*/
-  /*relativeのプロパティを持つ要素より上部に表示させるよう指定*/
-  /*🌸絶対位置指定です、相対位置指定との違いが調べてみましょう*/
-  top: 0;/*上部[maybe]*/
-  /*最上部から表示させるよう指定*/
-  left: 0;/*左側[maybe]*/
-  /*最も左側から表示させるよう指定*/
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  height: 100%;/* わからない [NG]*/
-  /*親要素の高さに合わせるよう指定*/
-  background: none;/*背景なし[maybe]*/
-  /*背景色なしを指定*/
-  z-index: 0;/* わからない [NG]*/
-  /* 要素同士の重なりった場合の優先度指定。数値が高いほど優先的に表示 */
-  opacity: 1;/* わからない [NG]*/
-  /* 不透明度指定。1は不透明 */
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: 0;
+  opacity: 1;
 }
 
+/*スライドショーが表示され終わった後の要素*/
 .slideshow::after {
-  display: none; /* 表示なし[maybe] */
-  /*画面から非表示指定*/
+  display: none; 
 }
 
+/*スライドショーに重ねて表示させる文字列の要素*/
 .hero-content {
-  position: relative;/* わからない [NG]*/
-  /*要素の重なりや移動の概念を指定*/
-  z-index: 2;/* わからない [NG]*/
-  /* 要素同士の重なりった場合の優先度指定。数値が高いほど優先的に表示 */
-  text-align: center;/* 文字を中央揃え*/
-  /* インライン要素を横中央揃えに指定 */
-  padding: 10px; /* わからない [NG]*/
-  /* borderより内側左右10pxずつ余白を指定 */
-  display: flex;/* わからない [NG]*/
-  /*インライン要素を均等配置指定*/
-  flex-direction: column;/* わからない [NG]*/
-  /* フレックスアイテムを上から下へ並べるよう指定 */
-  justify-content: center;/* 何を中央揃えなのかわからない [NG]*/
-  /*横並びになったフレックスアイテムを横中央揃えに指定*/
-  align-items: center;/* 何を中央揃えなのかわからない [NG]*/
-  /* フレックスアイテムを縦中央揃えに指定 */
-  width: 100%; /* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-
+/*heroで使う大項目スタイル*/
 .hero h2 {
   font-size: 3em;/* 文字サイズ設定 */
   margin: 0;/* 何の幅かわからないわからない [NG]*/
@@ -256,11 +164,15 @@ section {
   /*影文字の数値の指定。4つの数値のうち左から、水平 垂直 ぼかしの長さ 色 を入力する。*/
 }
 
+/*heroで使う段落のスタイル*/
+
 .hero p {
   font-size: 1.5em;/*文字サイズ設定*/
   margin: 10px 0;/* 何の余白なのかわからない、0の意味わからない [NG]*/
   /*borderの外側の上下左右の余白。上下に10pxの余白を指定*/
 }
+
+/*ボタンのスタイル*/
 
 .btn {
   display: inline-block;/* わからない [NG]*/
@@ -279,397 +191,308 @@ section {
   /* hoverなどの変化を付けた際に、変化にアニメーションを指定。box-shadowを0.3秒かけて徐々に偏差させるよう指定 */
 }
 
-.btn:hover {/*.btnにマウスを重ねた際の要素*/
-  background: #cc3333;/*背景色*/
+/*ボタンにマウスを合わせたときのスタイル*/
+
+.btn:hover {
+  background: #cc3333;
 }
 
+/*活動内容のエリアスタイル*/
 .gallery {
-  padding-top: 0; /* わからない [NG]*/
-  /*borderの内側の上側の余白。初期値0を指定*/
-  display: grid; /* わからない [NG]*/
-  /* 要素をグリッド指定 */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* わからない [NG]*/
-  /*グリッドの幅を自動で、要素の幅100%を使用して分割するよう指定。最低サイズが200px以下となると改行するよう指定。*/
-  gap: 10px;/* わからない [NG]*/
-  /*グリッド間の高さ、幅の余白を指定。高さ幅ともに10pxを指定*/
-  padding: 10px 0;/* わからない [NG]*/
-    /*borderの内側の上下左右の余白。上下10px、左右0pxの余白を指定*/
-  margin-top: 0;/* 一番上からの余白 [maybe]*/
-  /*borderの外側の上下左右の余白。上に0pxの余白を指定*/
+  padding-top: 0; 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px 0;
+  margin-top: 0;
 }
-
+/*活動内容の画像に適応するスタイル*/
 .gallery-item {
-  position: relative;/* わからない [NG]*/
-  /*要素の重なりや移動の概念を指定*/
-  text-decoration: none;/* わからない [NG]*/
-  /*文字列の設定をすべて非表示に指定*/
-  color: inherit;/* わからない [NG]*/
-  /*親クラスのcolorの数値を継承*/
+  position: relative;
+  text-decoration: none;
+  color: inherit;
 }
 
+/*活動内容の画像の下に文字列を入れる*/
 .gallery-item .overlay {
-  position: absolute;/* わからない [NG]*/
-  /*relativeのプロパティを持つ要素より上部に表示させるよう指定*/
-  top: 0;/* 上部[maybe] */
-  /*最上部から表示させるよう指定*/
-  left: 0;/* 左側[maybe] */
-  /*最も左側から表示させるよう指定*/
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  height: 100%;/* わからない [NG]*/
-  /*親要素の高さに合わせるよう指定*/
-  background: rgba(0, 0, 0, 0.6);/* 背景色はわかるが、rgbaがわからない [NG]*/
-  /*背景色と不透明度の指定。不透明度60の黒を指定*/
-  color: #fff;/*文字列の色*/
-  display: flex;/* わからない [NG]*/
-  /*インライン要素を均等配置指定*/
-  align-items: center;/* 何を中央揃えにするかわからない [NG]*/
-  /* フレックスアイテムを縦中央揃えに指定 */
-  justify-content: center;/* 何を中央揃えにするかわからない [NG]*/
-  /*横並びになったフレックスアイテムを横中央揃えに指定*/
-  text-align: center;/* 文字列を中央揃えにする */
-  /* インライン要素を横中央揃えに指定 */
-  font-size: 1.2em;/* 文字フォントサイズ */
-  opacity: 0;/* わからない [NG]*/
-  /* 不透明度指定。1は不透明 */
-  transition: opacity 0.3s ease;/* わからない [NG]*/
-  /* hoverなどの変化を付けた際に、変化にアニメーションを指定。不透明度を0.3秒かけて徐々に偏差させるよう指定 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
-
+/*活動内容の画像にマウスを持ってくると、文字列が出てくる*/
 .gallery-item:hover .overlay {
-  opacity: 1;/* わからない [NG]*/
-  /* 不透明度指定。1は不透明 */
+  opacity: 1;
 }
-
+/*画像そのものに適応するスタイル*/
 .gallery-img {
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  height: auto;/* 画像の高さを画像サイズに合わせる */
-  border: 2px solid #ff4444;/* 画像を赤い線で囲う [maybe]*/
-  /*borderに2pxで赤色の線をつける*/
-  border-radius: 5px;/* わからない [NG]*/
-  /*borderの四隅を丸に指定。半径5pxで指定*/
-  cursor: pointer;/* わからない [NG]*/
-  /*要素にマウスを持ってくると、マウスのグラフィックを変化させる。指に変化するよう指定*/
-  transition: transform 0.3s ease;/* わからない [NG]*/
-  /*hoverなどの変化を付けた際に、変化にアニメーションを指定。transformを0.3秒かけて徐々に偏差させるよう指定 */
+  width: 100%;
+  height: auto;
+  border: 2px solid #ff4444;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-
+/*優勝者コンテンツエリアスタイル*/
 .winners-gallery {
-  display: grid;/* わからない [NG]*/
-  /* 要素をグリッド指定 */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* わからない [NG]*/
-  /*グリッドの幅を自動で、要素の幅100%を使用して分割するよう指定。最低サイズが200px以下となると改行するよう指定。*/
-  gap: 10px;/* わからない [NG]*/
-  /*グリッド間の高さ、幅の余白を指定。高さ幅ともに10pxを指定*/
-  padding: 20px;/* わからない [NG]*/
-    /*borderの内側の上下左右の余白。上下左右20pxの余白を指定*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
 }
 
+/*優勝者それぞれのエリアスタイル*/
 .winner {
-  text-align: center;/* 文字列の中央揃え */
-  /* インライン要素を横中央揃えに指定 */
+  text-align: center;
 }
 
+/*優勝者チーム名の文字列スタイル*/
 .winner-name {
-  color: #ff4444;/* 文字列の色設定*/
-  margin: 5px 0;/* 何の余白かわからない [NG]*/
-    /*borderの外側の上下左右の余白。上下に5pxの余白を指定*/
-  font-size: 1.1em;/* 文字フォントサイズ */
+  color: #ff4444;
+  margin: 5px 0;
+  font-size: 1.1em;
 }
-
+/*優勝者チームメンバーの文字列スタイル*/
 .winner-menber {
-  color: #fff;/* 文字列の色 */
-  margin: 5px 0;/* 何の余白かわからない [NG]*/
-    /*borderの外側の上下左右の余白。上下に5pxの余白を指定*/
-  font-size: 1.1em;/* 文字フォントサイズ */
+  color: #fff;
+  margin: 5px 0;
+  font-size: 1.1em;
 }
 
+/*大会概要のエリアスタイル*/
 .overview-content {
-  padding: 20px;/* わからない [NG]*/
-    /*borderの内側の上下左右の余白。上下左右20pxの余白を指定*/
+  padding: 20px;
 }
-
+/*大会概要の項目名のスタイル*/
 .overview-content h3 {
-  color: #ff4444;/* 文字の色設定 */
-  margin-top: 20px;/* 上部の余白[maybe] */
-    /*borderの外側の上の余白。上に20pxの余白を指定*/
+  color: #ff4444;
+  margin-top: 20px
+}
+/*大会概要の段落と箇条書きのスタイル*/
+.overview-content p, .overview-content ul {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
-.overview-content p, .overview-content ul {
-  font-size: 1.1em;/* 文字列のサイズ */
-  line-height: 1.6;/* わからない [NG]*/
-  /*行間の余白を指定。*/
-}
+/*大会概要の箇条書きのスタイル*/
 
 .overview-content ul {
-  padding-left: 20px;/* わからない [NG]*/
-    /*borderの内側の左の余白。20pxの余白を指定*/
+  padding-left: 20px;
 }
+
+/*フッターのスタイル*/
 
 footer {
-  text-align: center; /* 文字の中央揃え */
-  /* インライン要素を横中央揃えに指定 */
-  padding: 20px;/* わからない [NG]*/
-    /*borderの内側の上下左右の余白。上下左右20pxの余白を指定*/
-  background: #000;/* 背景色 */
-  border-top: 2px solid #ff4444;/* footerの上部に赤い線を引く */
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  border-top: 2px solid #ff4444;
 }
 
+/*フォームのエリアスタイル*/
 .form-section {
-  background: #222;/* 背景色 */
-  padding: 30px;/* わからない [NG]*/
-    /*borderの内側の上下左右の余白。上下左右30pxの余白を指定*/
-  border-radius: 10px;/* わからない [NG]*/
-  /*borderの四隅を丸に指定。半径10pxで指定*/
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);/* わからない [NG]*/
-  /*要素に影をつけることができる。上下、左右、ぼかし、色で指定する。*/
-  margin: 20px 0;/* どこの余白かわからないのと0の意味が分からない [NG]*/
-    /*borderの外側の上下左右の余白。上下に20pxの余白を指定*/
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
 }
 
+/*フォームのタイトル*/
 .form-title {
-  color: #ff4444;/* 文字列の色指定 */
-  text-align: center;/* 文字列の中央揃え */
-  /* インライン要素を横中央揃えに指定 */
-  margin-bottom: 20px;/* 下の余白[maybe] */
-    /*borderの外側の上下左右の余白。下に20pxの余白を指定*/
-  font-size: 2em;/* 文字列のサイズ */
+  color: #ff4444;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
 }
-
+/*フォームの項目スタイル*/
 .form-group {
-  margin-bottom: 20px;/* 下側の余白[maybe] */
-    /*borderの外側の下の余白。下に20pxの余白を指定*/
+  margin-bottom: 20px;
+    
 }
-
+/*フォームのラベルスタイル*/
 .form-group label {
-  display: block; /* わからない [NG]*/
-  /*ブロック要素に指定*/
-  margin-bottom: 5px;/* 下側の余白[maybe] */
-    /*borderの外側の下の余白。上下に5pxの余白を指定*/
-  color: #ff9999;/* 文字フォントの色 */
-  font-weight: bold;/* わからない [NG]*/
-  /* 文字フォントの太さを太文字に指定 */
+  display: block;
+  margin-bottom: 5px;
+  color: #ff9999;
+  font-weight: bold;
 }
-
+/*(必須)を赤表示にするための要素*/
 .required {
-  color: #ff4444;/* 文字フォントの色 */
+  color: #ff4444;
 }
-
+/*テキスト入力エリアのスタイル*/
 .form-input, .form-textarea {
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  padding: 10px;/* わからない [NG]*/
-    /*borderの内側の上下左右の余白。上下左右10pxの余白を指定*/
-  background: #333;/*背景色*/
-  border: 2px solid #444;/* わからない [NG]*/
-  /*borderに2pxで灰色の線をつける*/
-  border-radius: 5px;/* わからない [NG]*/
-  /*borderの四隅を丸に指定。半径5pxで指定*/
-  color: #fff;/* 文字の色指定 */
-  font-size: 1em;/* 文字のサイズ指定 */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;/* わからない [NG]*/
-  /*hoverなどの変化を付けた際に、変化にアニメーションを指定。border-colorとbox-shadowを0.3秒かけて徐々に偏差させるよう指定 */
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  border: 2px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/*フォーカスされたときのスタイル*/
 .form-input:focus, .form-textarea:focus {
-  border-color: #ff4444;/* わからない [NG]*/
-  /*borderに色を付ける*/
-  box-shadow: 0 0 10px #ff6666;/* わからない [NG]*/
-  /*要素に影をつけることができる。上下、左右、ぼかし、色で指定する。*/
-  outline: none;/* わからない [NG]*/
-  /*フォームのアウトラインの設定を指定。アウトライン非表示を指定。*/
+  border-color: #ff4444;
+  box-shadow: 0 0 10px #ff6666;
+  outline: none;
 }
 
+/*ラジオボタンのスタイル*/
 .radio-group {
-  display: flex;/* わからない [NG]*/
-  /*インライン要素を均等配置指定*/
-  gap: 20px;/* わからない [NG]*/
-  /*グリッド間の高さ、幅の余白を指定。高さ幅ともに20pxを指定*/
-  align-items: center;/* わからない [NG]*/
-  /* フレックスアイテムを縦中央揃えに指定 */
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
+/*ラジオボタンを消すための要素*/
 .radio-input {
-  display: none;/* わからない [NG]*/
-  /*画面から非表示指定*/
+  display: none;
 }
 
+/*ラジオボタンの文字列のスタイル*/
 .radio-label {
-  display: flex;/* わからない [NG]*/
-  /*インライン要素を均等配置指定*/
-  align-items: center;/* わからない [NG]*/
-  /* フレックスアイテムを縦中央揃えに指定 */
-  color: #fff;/* 文字の色指定 */
-  cursor: pointer;/* わからない [NG]*/
-  /*要素にマウスを持ってくると、マウスのグラフィックを変化させる。指に変化するよう指定*/
-  padding: 5px 10px;/* わからない [NG]*/
-    /*borderの内側の上下左右の余白。上下5px、左右10pxの余白を指定*/
-  background: #444;/* 背景の色指定 */
-  border-radius: 5px;/* わからない [NG]*/
-  /*borderの四隅を丸に指定。半径5pxで指定*/
-  transition: background 0.3s ease;/* わからない [NG]*/
-  /*hoverなどの変化を付けた際に、変化にアニメーションを指定。backgroundを0.3秒かけて徐々に偏差させるよう指定 */
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #444;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
+/*選択されたラジオボタンのスタイル*/
 .radio-input:checked + .radio-label {
-  background: #ff4444;/* 背景色指定 */
-  color: #fff; /* 文字の色指定 */
+  background: #ff4444;
+  color: #fff; 
 }
 
+/*ラジオボタンにマウスを合わせた時のスタイル*/
 .radio-label:hover {
-  background: #555;/* 背景色指定 */
+  background: #555;
 }
 
+/*送信ボタンのスタイル*/
 .form-submit {
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  background: #ff4444;/* 背景色指定 */
-  border: none;/* わからない [NG]*/
-    /*borderを非表示*/
-  /*borderに2pxで赤色の線をつける*/
-  cursor: pointer;/* わからない [NG]*/
-  /*要素にマウスを持ってくると、マウスのグラフィックを変化させる。指に変化するよう指定*/
-  font-size: 1.2em;/* 文字フォントサイズ指定 */
+  width: 100%;
+  background: #ff4444;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
+/*送信ボタンにマウスを合わせたときのスタイル*/
 .form-submit:hover {
-  background: #cc3333; /*背景色指定*/
-  box-shadow: 0 0 15px #ff6666;/* わからない [NG]*/
-  /*要素に影をつけることができる。上下、左右、ぼかし、色で指定する。*/
+  background: #cc3333;
+  box-shadow: 0 0 15px #ff6666;
 }
 
+/*必須項目を入力していない場合の送信ボタンのスタイル*/
 
 .form-submit:disabled {
-  background: #666;/* 背景色指定 */
-  cursor: not-allowed;/* わからない [NG]*/
-  /*要素にマウスを持ってくると、マウスのグラフィックを変化させる。進入禁止マークに変化するよう指定*/
-  box-shadow: none;/* わからない [NG]*/
-  /*要素に影をつけることができる。上下、左右、ぼかし、色で指定する。*/
+  background: #666;
+  cursor: not-allowed;
+  box-shadow: none;
 }
-.form-submit:disabled:hover {
-  background: #666;/* 背景色指定 */
-  box-shadow: none;/* わからない [NG]*/
-  /*要素に影をつけることができる。上下、左右、ぼかし、色で指定する。*/
-}
-
+/*動画のエリアスタイル*/
 .video-container {
-  position: relative;/* わからない [NG]*/
-  /*要素の重なりや移動の概念を指定*/
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  padding-bottom: 56.25%;/* わからない [NG]*/
-  /*youtubeの動画16:9の比率を実現するにはpadding-bottomを56.25%と指定するする必要があるため*/
-  margin-bottom: 20px;/* 下の余白[maybe] */
-    /*borderの外側の下の余白。下に20pxの余白を指定*/
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  margin-bottom: 20px;
 }
 
-/* 動画のレスポンシブ対応 */
+/* 動画に対するスタイル */
 .video-container iframe {
-  position: absolute;/* わからない [NG]*/
-  /*relativeのプロパティを持つ要素より上部に表示させるよう指定*/
-  top: 0;/* 上部[maybe] */
-  /*最上部から表示させるよう指定*/
-  left: 0;/* 左側 [maybe]*/
-  /*最も左側から表示させるよう指定*/
-  width: 100%;/* わからない [NG]*/
-  /*親要素の幅に合わせるよう指定*/
-  height: 100%;/* わからない [NG]*/
-  /*親要素の高さに合わせるよう指定*/
-  border: none;/* わからない [NG]*/
-    /*borderを非表示*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* トップに戻るボタン */
-
 .back-to-top {
-  position: fixed;/* わからない [NG]*/
-  /*画面スクロールの際、常に設置位置固定で指定*/
-  bottom: 20px;/* 下側 */
-  right: 20px;/* 右側 */
-  padding: 10px 20px;/* わからない [NG]*/
-  /*borderの内側の上下左右の余白。上下10px、左右20pxの余白を指定*/
-  background: #ff4444;/* 背景色指定*/
-  color: #fff;/* 文字列の色指定*/
-  text-decoration: none;/* わからない [NG]*/
-  /*文字列の設定をすべて非表示に指定*/
-  border-radius: 50%;/* わからない [NG]*/
-  /*borderの四隅を丸に指定。半径50%で指定*/
-  font-size: 1.2em;/* 文字サイズ指定*/
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);/* わからない [NG]*/
-  /*要素に影をつけることができる。上下、左右、ぼかし、色で指定する。*/
-  z-index: 1000;/* わからない [NG]*/
-  /*要素同士の重なりが発生した際の、優先順位を宣言し、数値を指定*/
-  transition: background 0.3s ease;/* わからない [NG]*/
-  /*hoverなどの変化を付けた際に、変化にアニメーションを指定。backgroundを0.3秒かけて徐々に偏差させるよう指定 */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #ff4444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 1.2em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
 
+/* トップに戻るボタンにマウスを合わせたときのスタイル */
 .back-to-top:hover {
-  background: #cc3333;/* 背景色指定 */
+  background: #cc3333;
 }
 
+/* レスポンシブ対応スマホで見た時にどうなるかの設定 */
+@media (max-width: 768px) and (orientation: portrait) {
 
-@media (max-width: 768px) and (orientation: portrait) {/* レスポンシブ対応スマホで見た時にどうなるかの設定 */
+  /*bodyスタイル*/
   body{
-    padding-top: 110px; /* わからない [NG]*/
-    /*borderの内側の上の余白。上110pxの余白を指定*/
-      
+    padding-top: 110px;      
   }
+  /*header固定位置微調整*/
   header.fixed-header {
-    padding: 10px; /* わからない [NG]*/
-      /*borderの内側の上下左右の余白。上下左右10pxの余白を指定*/
+    padding: 10px;
 }
   h1 {
-      font-size:1.8em; /* 文字サイズ指定 */
+      font-size:1.8em;
   }
   
   .event-title {
-    font-size: 1.5em; /* 文字サイズ指定 */
+    font-size: 1.5em; 
 }
 
 .sp-break {
-  display: block; /* わからない [NG]*/
-  /*ブロック要素に指定*/
+  display: block;
 }
 
   nav ul {
-    display: flex;/* わからない [NG]*/
-    /*インライン要素を均等配置指定*/
-    justify-content: center;/* わからない [NG]*/
-    /*横並びになったフレックスアイテムを横中央揃えに指定*/
-    flex-wrap: nowrap; /* わからない [NG]*/
-    /*フレックスアイテムを折り返す表示させる*/
-    overflow-x: auto; /* わからない [NG]*/
-    /*要素からはみ出た場合どう処理するか指定する。スクロールで表示されるようにする。*/
-    -webkit-overflow-scrolling: touch; /* わからない [NG]*/
-    /*スクロールした際の挙動について指定。指でスクロールした際、惰性で流れるように指定*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
 }
   nav ul li {
-      display: block;/* わからない [NG]*/
-      /*ブロック要素に指定*/
-      margin: 0 5px;/* どこの余白かわからない [NG]*/
-        /*borderの外側の上下左右の余白。左右に5pxの余白を指定*/
+      display: block;
+      margin: 0 5px;
   }
   .hero {
-      padding: 20px 10px;/* わからない [NG]*/
-      /*borderの内側の上下左右の余白。上下20px、左右10pxの余白を指定*/
-      min-height: 120px; /* 高さの最低値設定 */
-        height: auto;/* 高さを画像サイズに合わせる */
-      margin-bottom: 0;/* 下の余白[maybe] */
-        /*borderの外側の下の余白。下に0pxの余白を指定*/
-      height: auto; /* 高さを画像サイズに合わせる[maybe]*/
-      /* 高さを画像サイズに合わせる */
-      display: flex;/* わからない [NG]*/
-      /*インライン要素を均等配置指定*/
-      justify-content: center;/* 何の中央揃えかわからない [NG]*/
-      /*横並びになったフレックスアイテムを横中央揃えに指定*/
-      align-items: center;/* 何の中央揃えかわからない [NG]*/
-      /* フレックスアイテムを縦中央揃えに指定 */
+      padding: 20px 10px;
+      min-height: 120px;
+        height: auto;
+      margin-bottom: 0;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
   .hero::after {
-    height: 100%; /* わからない [NG]*/
-    /*親要素の高さに合わせるよう指定*/
-    min-height: 120px; /* 高さの最低値設定 */
+    height: 100%;
+    min-height: 120px;
 }
   .hero h2 {
       font-size: 1.3em;/* 文字サイズ指定 */

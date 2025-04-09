@@ -1,110 +1,104 @@
-<!DOCTYPE html><!-- htmlファイルであることを宣言*[maybe] -->
-<!-- html5表示の指定 -->
-<html lang="ja"><!-- 日本語ですよを伝えてる（何に伝えてるのかはわからない）[NG]-->
-    <!-- ページに書かれた言語が日本語であることを宣言-->
-<head><!-- ウェブサイトの設定部分という認識[maybe] -->
-    <!-- メタ情報を書き込む場所、どこのサイトから情報を引っ張ってきているかなど... -->
-    <meta charset="UTF-8"><!-- 文字コードの宣言 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--これを使いますよ！って感じなのかな？よくわからないです[NG]-->
-    <!--viewportとは、書き込むことができる場所のこと。widthはviewportの大きさ上の広さの指定、width=device-widthは機種の液晶画面によって、広さを合わせるよう指定、initial-scale=1.0はページを読み込んだ際の拡大率この場合は100%-->
-    <title>バトルトリニティ大会</title><!-- 検索エンジンのタブに書かれる文字列 -->
-    <link rel="stylesheet" href="css/styles.css"><!-- このスタイルシートを使いますという宣言 -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><!--jquery読み込み-->
-</head><!-- ここまでがヘッドタグですよ -->
-<body><!-- ホームページに書かれる内容。メイン。 -->
-    <header class="fixed-header"><!--ホームページのヘッダー部分の定義。クラスをfixed-headerに属させた-->
-        <h1>バトルトリニティ大会</h1><!--大項目-->
-        <nav><!--navタグ宣言-->
-            <ul><!--小分けにできるタグという認識[maybe]-->
-                <!--<ul>タグは箇条書きの宣言-->
-                <li><a href="#home">ホーム</a></li><!--ホームという文字列をクリックすると#homeに飛ぶことができる-->
-                <li><a href="#events">活動内容</a></li><!--活動内容という文字列をクリックすると#eventsに飛ぶことができる-->
-                <li><a href="#winners">優勝者</a></li><!--優勝者というリンクをクリックすると#winnersに飛ぶことができる-->
-                <li><a href="#overview">大会概要</a></li><!--大会概要という文字列をクリックすると--#overviewに飛ぶことができる-->
-            </ul><!--ulタグの終わり-->
-        </nav><!--navタグの終わり-->
-    </header><!--headerタグの終わり-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バトルトリニティ大会</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<body>
+    <header class="fixed-header">
+        <h1>バトルトリニティ大会</h1>
+        <nav>
+            <ul>
+                
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#events">活動内容</a></li>
+                <li><a href="#winners">優勝者</a></li>
+                <li><a href="#overview">大会概要</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container"><!--divはグループ化、どこのクラス所属させて一括でスタイルシートの情報を適応させるのに便利-->
-        <section id="home"><!--idをhomeに指定することでheaderのホームをクリックすることで、飛ばすことができる-->
-            <div class="hero"><!--divをheroクラスに所属させる-->
-                <div class="slideshow"></div><!--スライドショーの領域を定義-->
-                <div class="hero-content"><!--スライドショーの一番前に表示される文字列をhero-contentに所属させる-->
-                    <h2><span class="hero-title-part1">圧倒的大規模な</span><br class="mobile-break"><span class="hero-title-part2">大会がここに！</span></h2><!--文字列をレシポンシブの場合 "圧倒的な" で改行させたいが、PC版の場合改行させない設定-->
-                    <p>熱い戦いが待ってるぜ！</p><!--h2より小さく表示させる-->
-                    <a href="join-form.html" class="btn">参加フォームへ</a><!--参加フォームへと記載されたボタンを定義する-->
-                </div><!--hero-contentの終わりのタグ-->
-            </div><!--hiroの終わりのタグ-->
-        </section><!--id homeの終了タグ-->
+    <div class="container">
+        <section id="home">
+            <div class="hero">
+                <div class="slideshow"></div>
+                <div class="hero-content">
+                    <h2><span class="hero-title-part1">圧倒的大規模な</span><br class="mobile-break"><span class="hero-title-part2">大会がここに！</span></h2>
+                    <p>熱い戦いが待ってるぜ！</p>
+                    <a href="join-form.html" class="btn">参加フォームへ</a>
+                </div>
+            </div>
+        </section>
 
-        <section id="events"><!--eventsセクションの始まり-->
-            <h2>活動内容</h2><!--ページの左上に "活動内容" と表示される-->
-            <div class="gallery"><!--galleryクラスに所属させたdivタグ-->
-                <a href="summer1.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
-                    <img src="images/summer1.jpg" alt="第一回サマーカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの[NG]-->
-                    <!--altタグは画像が読み込みで不可である場合、代替として文字列を表示させる属性-->
-                    <div class="overlay">第一回<br>バトルトリニティ<br>サマーカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
-                </a><!--aタグの終わり-->
-                <a href="winter1.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
-                    <img src="images/winter1.jpg" alt="第一回ウィンターカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの-->
-                    <div class="overlay">第一回<br>バトルトリニティ<br>ウィンターカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
-                </a><!--aタグの終わり-->
-                <a href="summer2.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
-                    <img src="images/summer2.jpg" alt="第二回サマーカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの-->
-                    <div class="overlay">第二回<br>バトルトリニティ<br>サマーカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
-                </a><!--aタグの終わり-->
-                <a href="winter2.html" class="gallery-item"><!--クリックすると指定の大会のページに飛ぶようになる-->
-                    <img src="images/winter2.jpg" alt="第二回ウィンターカップ" class="gallery-img"><!--クリックするものを画像と定義し、クラスをgallery-imgに所属させた。altが何を意味するか不明。正直いらないんじゃないかとも思うもの-->
-                    <div class="overlay">第二回<br>バトルトリニティ<br>ウィンターカップ</div><!--マウスを持ってくると、文字列が出てくるようにする-->
-                </a><!--aタグの終わり-->
-            </div><!--galleryクラスに所属させたdivタグの終わり-->
-        </section><!--eventsセクションの終わり-->
+        <section id="events">
+            <h2>活動内容</h2>
+            <div class="gallery">
+                <a href="summer1.html" class="gallery-item">
+                    <img src="images/summer1.jpg" alt="第一回サマーカップ" class="gallery-img">
+                    <div class="overlay">第一回<br>バトルトリニティ<br>サマーカップ</div>
+                </a>
+                <a href="winter1.html" class="gallery-item">
+                    <img src="images/winter1.jpg" alt="第一回ウィンターカップ" class="gallery-img">
+                    <div class="overlay">第一回<br>バトルトリニティ<br>ウィンターカップ</div>
+                </a>
+                <a href="summer2.html" class="gallery-item">
+                    <img src="images/summer2.jpg" alt="第二回サマーカップ" class="gallery-img">
+                    <div class="overlay">第二回<br>バトルトリニティ<br>サマーカップ</div>
+                </a>
+                <a href="winter2.html" class="gallery-item">
+                    <img src="images/winter2.jpg" alt="第二回ウィンターカップ" class="gallery-img">
+                    <div class="overlay">第二回<br>バトルトリニティ<br>ウィンターカップ</div>
+                </a>
+            </div>
+        </section>
 
-        <section id="winners"><!--winnersセクションの始まり-->
-            <h2>優勝者</h2><!--ページの左上に "優勝者" と表示される-->
-            <div class="winners-gallery"><!--winners-galleryクラスに所属させたdivタグ-->
-                <div class="winner"><!--winnerクラスに所属させたdivタグ-->
-                    <img src="images/winner1.jpg" alt="優勝者1" class="gallery-img"><!--gallery-imgクラスに所属させた画像を定義-->
-                    <p class="winner-name">【チーム名】<br>南瓜軍団(仮)</p><!--チーム名とメンバーの色を変えるためクラスをそれぞれに分けて定義-->
-                    <p class="winner-menber">【メンバー】<br>ゴン  わたる  ティアラ  <br>アリーシャ  モンキー</p><!--チーム名とメンバーの色を変えるためクラスをそれぞれに分けて定義-->
-                </div><!--winnerクラスに所属させたdivタグの終わり-->
-                <div class="winner"><!--winnerクラスに所属させたdivタグ-->
-                    <img src="images/winner2.jpg" alt="優勝者2" class="gallery-img"><!--gallery-imgクラスに所属させた画像を定義-->
-                    <p class="winner-name">【チーム名】<br>真夜中のはちみつ☆シリアル</p><!--チーム名とメンバーの色を変えるためクラスをそれぞれに分けて定義-->
-                    <p class="winner-menber">【メンバー】<br>ミオ  アルカード  よー <br>りー  シオン</p><!--チーム名とメンバーの色を変えるためクラスをそれぞれに分けて定義-->
-                </div><!--winnerクラスに所属させたdivタグの終わり-->
-                <div class="winner"><!--winnerクラスに所属させたdivタグ-->
-                    <img src="images/winner3.jpg" alt="優勝者3" class="gallery-img"><!--gallery-imgクラスに所属させた画像を定義-->
-                    <p class="winner-name">【チーム名】<br>おしおきJAPAN  滅</p><!--チーム名とメンバーの色を変えるためクラスをそれぞれに分けて定義-->
-                    <p class="winner-menber">【メンバー】<br>デロデロのユ  キラリス <br>ろでっち  ぬめたん  ちき</p><!--チーム名とメンバーの色を変えるためクラスをそれぞれに分けて定義-->
-                </div><!--winnerクラスに所属させたdivタグの終わり-->
-            </div><!--winners-galleryクラスに所属させたdivタグの終わり-->
-        </section><!--winnersセクションの終わり-->
+        <section id="winners">
+            <h2>優勝者</h2>
+            <div class="winners-gallery">
+                <div class="winner">
+                    <img src="images/winner1.jpg" alt="優勝者1" class="gallery-img">
+                    <p class="winner-name">【チーム名】<br>南瓜軍団(仮)</p>
+                    <p class="winner-menber">【メンバー】<br>ゴン  わたる  ティアラ  <br>アリーシャ  モンキー</p>
+                </div>
+                <div class="winner">
+                    <img src="images/winner2.jpg" alt="優勝者2" class="gallery-img">
+                    <p class="winner-name">【チーム名】<br>真夜中のはちみつ☆シリアル</p>
+                    <p class="winner-menber">【メンバー】<br>ミオ  アルカード  よー <br>りー  シオン</p>
+                </div>
+                <div class="winner">
+                    <img src="images/winner3.jpg" alt="優勝者3" class="gallery-img">
+                    <p class="winner-name">【チーム名】<br>おしおきJAPAN  滅</p>
+                    <p class="winner-menber">【メンバー】<br>デロデロのユ  キラリス <br>ろでっち  ぬめたん  ちき</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="overview"><!--overviewセクションの始まり-->
-            <h2>大会概要</h2><!--ページの左上に "大会概要" と表示される-->
-            <div class="overview-content"><!--overview-contentクラスに所属させたdivタグの始まり-->
-                <h3>大会の目的</h3><!-- "大会の目的" という文字列を中項目として表示-->
-                <p>バトルトリニティのコンテンツの活性化が目的で、勝った人も負けた人も楽しめる大会を目指して運営してます。</p><!--大会の目的の中身を記載-->
-                <h3>ルール</h3><!-- "ルール" という文字列を中項目として表示-->
-                <ul><!--ルールを分かりやすく箇条書きに列挙-->
-                    <li>予選約４試合</li><!--説明内容を記載-->
-                    <li>準決勝３試合</li><!--説明内容を記載-->
-                    <li>決勝戦１試合</li><!--説明内容を記載-->
-                    <li>※予選で勝利数が同じだった場合、２位との得点差が少ないほうが、予選突破となります。</li><!--説明内容を記載-->
-                </ul><!--ulタグの終わり-->
-                <h3>スケジュール</h3><!--"スケジュール" という文字列を中項目として表示-->
-                <p>次回大会: 未定</p><!--スケジュール内容を記載-->
-            </div><!--overview-contentクラスに所属させたdivタグの終わり-->
-        </section><!--overviewセクションの終わり-->
-    </div><!--containerに所属したdivタグの終わり-->
+        <section id="overview">
+            <h2>大会概要</h2>
+            <div class="overview-content">
+                <h3>大会の目的</h3>
+                <p>バトルトリニティのコンテンツの活性化が目的で、勝った人も負けた人も楽しめる大会を目指して運営してます。</p>
+                <h3>ルール</h3>
+                <ul>
+                    <li>予選約４試合</li>
+                    <li>準決勝３試合</li>
+                    <li>決勝戦１試合</li>
+                    <li>※予選で勝利数が同じだった場合、２位との得点差が少ないほうが、予選突破となります。</li>
+                </ul>
+                <h3>スケジュール</h3>
+                <p>次回大会: 未定</p>
+            </div>
+        </section>
+    </div>
 
-    <footer><!--フッターの定義-->
-        <p>© 2025 バトルトリニティ大会</p><!--コピーライトをつけてそれっぽさを演出-->
-    </footer><!--フッターの終わり-->
+    <footer>
+        <p>© 2025 バトルトリニティ大会</p>
+    </footer>
 
-    <a href="#home" class="back-to-top">TOP</a><!--トップボタンの配置-->
+    <a href="#home" class="back-to-top">TOP</a>
 
-    <script src="js/script.js"></script><!--自分で記載したjavascriptの定義-->
-</body><!--ボディタグの終わり-->
-</html><!--htmlタグの終わり-->
+    <script src="js/script.js"></script>
+</body>
+</html>

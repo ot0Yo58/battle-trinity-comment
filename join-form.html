@@ -1,91 +1,91 @@
-<!DOCTYPE html> <!-- htmlファイルであることを宣言*[maybe] -->
-<html lang="ja"> <!-- 日本語ですよを伝えてる（何に伝えてるのかはわからない）-->
-<head><!-- ウェブサイトの設定部分という認識[maybe] -->
-    <meta charset="UTF-8"> <!-- 文字コードの宣言 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--これを使いますよ！って感じなのかな？よくわからないです[NG]-->
-    <title>バトルトリニティ大会 - 参加フォーム</title><!-- 検索エンジンのタブに書かれる文字列 -->
-    <link rel="stylesheet" href="css/styles.css"><!-- このスタイルシートを使いますという宣言 -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><!--jquery読み込み-->
-</head><!-- ここまでがヘッドタグですよ -->
-<body><!-- ホームページに書かれる内容。メイン。 -->
-    <header class="fixed-header"><!--ホームページのヘッダー部分の定義。クラスをfixed-headerに属させた-->
-        <h1 class="event-title">バトルトリニティ大会<span class="sp-break"></span>参加フォーム</h1><!--ページの案内。SP番だと "参加フォーム" が改行される-->
+<!DOCTYPE html> 
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>バトルトリニティ大会 - 参加フォーム</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header class="fixed-header">
+        <h1 class="event-title">バトルトリニティ大会<span class="sp-break"></span>参加フォーム</h1>
         <nav>
             <ul>
-                <li><a href="index.html#home">トップに戻る</a></li><!-- "トップに戻る"をクリックすると "home" に飛ぶようにする-->
+                <li><a href="index.html#home">トップに戻る</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container"><!--このdivのcssにcontainerを適応-->
-        <section class="form-section"><!--このsectionのcssにform-sectionを適応-->
-            <h2 class="form-title">参加フォーム</h2><!--このh2のcssにform-titleを適応-->
-            <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="post" class="join-form"><!--グーグルフォームと関連付け[maybe]-->
-                <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                    <label for="team-name">チーム名:<span class="required">(必須)</span></label><!--チーム名の色と(必須)の色を変える-->
-                    <input type="text" id="team-name" name="entry.123456789" required class="form-input"><!--チーム名を入力する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
+    <div class="container">
+        <section class="form-section">
+            <h2 class="form-title">参加フォーム</h2>
+            <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="post" class="join-form">
+                <div class="form-group">
+                    <label for="team-name">チーム名:<span class="required">(必須)</span></label>
+                    <input type="text" id="team-name" name="entry.123456789" required class="form-input">
                 </div>
 
-                <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                    <label for="leader-name">リーダー名:<span class="required">(必須)</span></label><!--リーダー名の色と(必須)の色を変える-->
-                    <input type="text" id="leader-name" name="entry.987654321" required class="form-input"><!--リーダー名を入力する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
+                <div class="form-group">
+                    <label for="leader-name">リーダー名:<span class="required">(必須)</span></label>
+                    <input type="text" id="leader-name" name="entry.987654321" required class="form-input">
                 </div>
 
-                <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                    <label>ライブ配信可否:</label><!--質問内容の名前-->
-                    <div class="radio-group"><!--このdivのcssにradio-groupを適応-->
-                        <input type="radio" id="live-yes" name="entry.111222333" value="yes" checked required class="radio-input"><!--yesを選択する領域の宣言と、グーグルフォームのどの部分に適応されるか指定。デフォルト値-->
-                        <label for="live-yes" class="radio-label">可</label><!--yesのときのラジオボタンの名前-->
-                        <input type="radio" id="live-no" name="entry.111222333" value="no" class="radio-input"><!--noを選択する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
-                        <label for="live-no" class="radio-label">不可</label><!--noのときのラジオボタンの名前-->
+                <div class="form-group">
+                    <label>ライブ配信可否:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="live-yes" name="entry.111222333" value="yes" checked required class="radio-input">
+                        <label for="live-yes" class="radio-label">可</label>
+                        <input type="radio" id="live-no" name="entry.111222333" value="no" class="radio-input">
+                        <label for="live-no" class="radio-label">不可</label>
                     </div>
                 </div>
 
-                <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                    <label>Discord参加可否:</label><!--質問内容の名前-->
-                    <div class="radio-group"><!--このdivのcssにradio-groupを適応-->
-                        <input type="radio" id="discord-yes" name="entry.777888999" value="yes" checked required class="radio-input"><!--yesを選択する領域の宣言と、グーグルフォームのどの部分に適応されるか指定。デフォルト値-->
-                        <label for="discord-yes" class="radio-label">可</label><!--yesのときのラジオボタンの名前-->
-                        <input type="radio" id="discord-no" name="entry.777888999" value="no" class="radio-input"><!--noを選択する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
-                        <label for="discord-no" class="radio-label">不可</label><!--noのときのラジオボタンの名前-->
+                <div class="form-group">
+                    <label>Discord参加可否:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="discord-yes" name="entry.777888999" value="yes" checked required class="radio-input">
+                        <label for="discord-yes" class="radio-label">可</label>
+                        <input type="radio" id="discord-no" name="entry.777888999" value="no" class="radio-input">
+                        <label for="discord-no" class="radio-label">不可</label>
                     </div>
                 </div>
 
-                <!-- メンバーの入力欄をtextareaから4つのinputに変更 -->
-                <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                    <label>メンバー (4人の名前)<span class="required">(必須)</span>:</label><!--メンバー (4人の名前)の色と(必須)の色を変える-->
-                    <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                        <label for="member1">メンバー1:</label><!--質問内容の名前-->
-                        <input type="text" id="member1" name="entry.444555666_1" required class="form-input"><!--メンバー1を入力する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
+
+                <div class="form-group">
+                    <label>メンバー (4人の名前)<span class="required">(必須)</span>:</label>
+                    <div class="form-group">
+                        <label for="member1">メンバー1:</label>
+                        <input type="text" id="member1" name="entry.444555666_1" required class="form-input">
                     </div>
-                    <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                        <label for="member2">メンバー2:</label><!--質問内容の名前-->
-                        <input type="text" id="member2" name="entry.444555666_2" required class="form-input"><!--メンバー2を入力する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
+                    <div class="form-group">
+                        <label for="member2">メンバー2:</label>
+                        <input type="text" id="member2" name="entry.444555666_2" required class="form-input">
                     </div>
-                    <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                        <label for="member3">メンバー3:</label><!--質問内容の名前-->
-                        <input type="text" id="member3" name="entry.444555666_3" required class="form-input"><!--メンバー3を入力する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
+                    <div class="form-group">
+                        <label for="member3">メンバー3:</label>
+                        <input type="text" id="member3" name="entry.444555666_3" required class="form-input">
                     </div>
-                    <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                        <label for="member4">メンバー4:</label><!--質問内容の名前-->
-                        <input type="text" id="member4" name="entry.444555666_4" required class="form-input"><!--メンバー4を入力する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
+                    <div class="form-group">
+                        <label for="member4">メンバー4:</label>
+                        <input type="text" id="member4" name="entry.444555666_4" required class="form-input">
                     </div>
                 </div>
 
-                <div class="form-group"><!--このdivのcssにform-groupを適応-->
-                    <label for="remarks">備考:</label><!--質問内容の名前-->
-                    <textarea id="remarks" name="entry.000111222" rows="3" class="form-textarea"></textarea><!--備考を入力する領域の宣言と、グーグルフォームのどの部分に適応されるか指定-->
+                <div class="form-group">
+                    <label for="remarks">備考:</label>
+                    <textarea id="remarks" name="entry.000111222" rows="3" class="form-textarea"></textarea>
                 </div>
 
-                <button type="submit" class="btn form-submit" disabled>送信</button><!--送信ボタン宣言-->
+                <button type="submit" class="btn form-submit" disabled>送信</button>
             </form>
         </section>
     </div>
 
     <footer>
-        <p>© 2025 バトルトリニティ大会</p><!--コピーライトをつけてそれっぽさを演出-->
+        <p>© 2025 バトルトリニティ大会</p>
     </footer>
 
-    <script src="js/script.js"></script><!--自分で記載したjavascriptの定義-->
+    <script src="js/script.js"></script>
 </body>
 </html>
